@@ -4,3 +4,64 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: black;
+}
+
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+    z-index: 9999;
+}
+
+#splash-screen img {
+    width: 12vw;
+    animation: blu 0.8s infinite alternate;
+}
+
+#splash-screen .spinner {
+    display: flex;
+    gap: 0.8vw;
+    height: 2vw;
+}
+
+#splash-screen .spinner .dot {
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 50%;
+    animation: grow 0.8s infinite alternate;
+}
+
+#splash-screen .spinner .dot:nth-child(2) {
+    animation-delay: 150ms;
+}
+
+#splash-screen .spinner .dot:nth-child(3) {
+    animation-delay: 300ms;
+}
+
+#splash-screen .spinner .dot:nth-child(4) {
+    animation-delay: 450ms;
+}
+
+@keyframes grow {
+    to {
+        width: 2vw;
+        height: 2vw;
+    }
+}
+
+@keyframes blu {
+    to {
+        margin-bottom: 0.5vw;
+    }
+}
