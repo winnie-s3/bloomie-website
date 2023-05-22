@@ -269,3 +269,53 @@ section {
     font-size: 2vw;
     line-height: 2.5vw;
 }
+
+/* -------- FILOSOFIA -------- */
+
+.filosofia-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    margin-left: 15vw;
+    text-align: left;
+    color: #0B528C;
+    gap: 1.5vw;
+}
+
+.filosofia-container h1{
+    width: 40vw;
+    font-size: 3vw;
+    font-weight: 700;
+    color: #1185E3;
+}
+
+.filosofia-container h2 {
+    font-weight: lighter;
+    width: 32vw;
+    font-size: 1.5vw;
+    line-height: 2.2vw;
+}
+
+.filosofia-row-container {
+    display: flex;
+    flex-direction: row;
+    gap: 4vw;
+    margin-top: 2vw;
+}
+
+.filosofia-row-container img {
+    width: 7.5vw;
+    border-radius: 1vw;
+}
+
+.filo-foto {
+    width: 30vw;
+    position: absolute;
+    bottom: -200vh;
+    right: 0;
+}
+
+/* --------- NOSSO DNA ---------- */
+
