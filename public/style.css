@@ -61,12 +61,34 @@ a {
     animation-delay: 450ms;
 }
 
-.navbar {
+section {
+    height: 100vh;
+}
+
+.bottom-line {
     position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.5vw;
+    background-color: #1285E1;
+}
+
+.bottom-line2 {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.5vw;
+    background-color: #1285E1;
+}
+
+.navbar {
+    position: fixed;
     width: 7vw;
     height: 100vh;
     transition: width 400ms ease;
     font-weight: 600;
+    z-index: 9998;
 }
 
 .navbar-nav {
@@ -200,8 +222,50 @@ a {
 }
 
 .home-img img {
-    position: fixed;
+    position: absolute;
     width: 35vw;
     right: 0;
     bottom: 0;
+}
+
+/* -------- SOBRE -------- */
+
+.sobre-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    margin-left: 15vw;
+    text-align: left;
+    color: #0B528C;
+    gap: 1.5vw;
+}
+
+.sobre-container h3 {
+    width: 35vw;
+    font-size: 1.5vw;
+}
+
+.sobre-container h1 {
+    width: 35vw;
+    font-size: 2vw;
+}
+
+.sobre-row-container {
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+}
+
+.sobre-row-container img {
+    width: 25vw;
+    height: 25vw;
+}
+
+.sobre-row-container h2 {
+    font-weight: lighter;
+    width: 40vw;
+    font-size: 2vw;
+    line-height: 2.5vw;
 }
