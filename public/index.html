@@ -3,19 +3,20 @@
 
 <head>
     <title>Title</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS v5.2.1 -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.css'>
+    <link rel="stylesheet" href="style.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/regular/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="style.css">
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script src="https://kit.fontawesome.com/fec6e5d711.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <body>
@@ -39,13 +40,13 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="" class="nav-link">
+                    <a href="#home" class="nav-link">
                         <i class="ph-bold ph-house"></i>
                         <span class="link-text">Home</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">
+                    <a href="#sobre" class="nav-link">
                         <i class="ph-bold ph-info"></i>
                         <span class="link-text">Sobre</span>
                     </a>
@@ -69,7 +70,8 @@
             <div class="home-container">
                 <div class="home-textos">
                     <img src="/src/assets/logoBloomie.png" alt="">
-                    <h1><strong>A rede social que torna o seu sucesso, <span style="color:#F2C934;">real</span><span style="color: #1285E1;">.</span></strong></h1>
+                    <h1><strong>A rede social que torna o seu sucesso, <span style="color:#F2C934;">real</span><span
+                                style="color: #1285E1;">.</span></strong></h1>
                     <h3>Oportunidades de crescimento pessoal e profissional te esperam na Bloomie.</h3>
                     <button>Crie sua conta</button>
                 </div>
@@ -89,7 +91,9 @@
             <div class="sobre-row-container">
                 <img src="/src/assets/sobre-foto1.png" alt="">
                 <h2>
-                    <strong>Bloomie</strong> é a <strong>plataforma gratuita</strong> que conecta jovens do 9° ano do Ensino Fundamental ao 3° ano do Ensino Médio à <strong>oportunidades de crescimento</strong>  acadêmico, profissional e pessoal.
+                    <strong>Bloomie</strong> é a <strong>plataforma gratuita</strong> que conecta jovens do 9° ano do
+                    Ensino Fundamental ao 3° ano do Ensino Médio à <strong>oportunidades de crescimento</strong>
+                    acadêmico, profissional e pessoal.
                     <br>
                     <br>
                     <strong>Nós acreditamos no poder das oportunidades.</strong>
@@ -104,7 +108,8 @@
         <div class="filosofia-container">
             <h3>Filosofia</h3>
             <h1>Nós acreditamos no poder das oportunidades.</h1>
-            <h2>E em pensar a Educação como a construção de experiências de crescimento, que devem ser acessadas por todos e todas.</h2>
+            <h2>E em pensar a Educação como a construção de experiências de crescimento, que devem ser acessadas por
+                todos e todas.</h2>
             <div class="filosofia-row-container">
                 <img src="/src/assets/filo-icon1.png" alt="">
                 <img src="/src/assets/filo-icon2.png" alt="">
@@ -120,23 +125,65 @@
     <section class="dna">
         <div class="dna-container">
             <h3>Nosso DNA</h3>
-            
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-color: #F2C934;">
+                        <div class="swiper-img-texto">
+                            <img src="/src/assets/dna-foto2.png" alt="">
+                            <div class="texto">
+                                <p class="slide-titulo">Visão</p>
+                                <p class="texto-p">Tornar o florescimento pessoal e profissional uma realidade para todo
+                                    estudante, capacitando-o com recursos que permitam alcançar seu potencial e
+                                    transformar
+                                    seu futuro.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide valores" style="background-color: #006EFF;">
+                        <div class="swiper-img-texto">
+                            <img src="/src/assets/dna-foto1.png" alt="">
+                            <div class="texto">
+                                <p class="slide-titulo">Valores</p>
+                                <ul>
+                                    <li>Inclusão</li>
+                                    <li>Responsabilidade Social</li>
+                                    <li>Empoderamento</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide" style="background-color: #0B528C;">
+                        <div class="swiper-img-texto">
+                            <img src="/src/assets/dna-foto3.png" alt="">
+                            <div class="texto">
+                                <p class="slide-titulo">Missão</p>
+                                <p class="texto-p texto-missao">Conectar estudantes à oportunidades de desenvolvimento
+                                    pessoal, profissional e acadêmico.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
+        <div class="bottom-line2"></div>
     </section>
 
-    
     <footer>
         <!-- place footer here -->
     </footer>
+
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-        </script>
-
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-        </script>
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.js'></script>
     <script src="script.js"></script>
 </body>
 

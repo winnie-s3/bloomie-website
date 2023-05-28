@@ -7,6 +7,10 @@
     font-family: "aileron", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -192,12 +196,12 @@ section {
     margin-left: 15vw;
 }
 
-.home-textos img{
+.home-textos img {
     width: 12vw;
     margin-bottom: 3vw;
 }
 
-.home-textos button{
+.home-textos button {
     width: 28vw;
     margin-top: 3vw;
     background-color: #1285E1;
@@ -209,15 +213,15 @@ section {
     font-weight: 700;
 }
 
-.home-textos h1{
+.home-textos h1 {
     font-size: 2.5vw;
     color: #0B528C;
     margin-bottom: 1.2vw;
 }
 
-.home-textos h3{
+.home-textos h3 {
     font-size: 1.5vw;
-    font-weight:normal;
+    font-weight: normal;
     color: #1285E1;
 }
 
@@ -284,7 +288,7 @@ section {
     gap: 1.5vw;
 }
 
-.filosofia-container h1{
+.filosofia-container h1 {
     width: 40vw;
     font-size: 3vw;
     font-weight: 700;
@@ -319,3 +323,93 @@ section {
 
 /* --------- NOSSO DNA ---------- */
 
+.dna-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    margin-left: 15vw;
+    text-align: left;
+    color: #0B528C;
+}
+
+.swiper-container .swiper-pagination .swiper-pagination-bullet {
+    width: 1vw;
+    height: 1vw;
+  }
+  
+  .swiper-container .swiper-pagination .swiper-pagination-bullet:not(:last-child) {
+    margin-right: 0.5vw;
+  }
+
+  .swiper-wrapper {
+    width: 58vw;
+  }
+  
+  .swiper-container {
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    margin: 0;
+  }
+  
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 34vw;
+    height: 20vw;
+    border-radius: 2vw;
+    padding: 3vw;
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .swiper-slide .swiper-img-texto {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+  }
+  
+  .swiper-slide .swiper-img-texto img {
+    width: 3.5vw;
+  }
+  
+  .swiper-slide .swiper-img-texto .texto {
+    margin-left: 1vw;
+  }
+  
+  .swiper-slide .swiper-img-texto .texto  ul {
+    list-style-position: inside;
+    padding-left: 0;
+    font-size: 1.3vw;
+    margin-top: 2vw;
+  }
+  
+  .swiper-slide .swiper-img-texto .texto  ul li:not(:last-child){
+    margin-bottom: 1.2vw;
+  }
+  
+  .swiper-slide .swiper-img-texto .texto p {
+    font-size: 1.2vw;
+    line-height: 1.8vw;
+    margin-top: 2vw;
+  }
+  
+  .swiper-slide .swiper-img-texto .texto .slide-titulo {
+    font-size: 1.8vw;
+    font-weight: 700;
+    margin-top: 1vw;
+  }
+  
+  .swiper-slide .texto-p {
+    margin-left: -4vw;
+  }
+  
+  .swiper-slide .texto-missao {
+    margin-top: 2.2vw;
+  }
