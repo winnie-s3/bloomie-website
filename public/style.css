@@ -234,7 +234,9 @@ section {
 
 /* -------- SOBRE -------- */
 
-.sobre-container {
+.sobre-container,
+.filosofia-container,
+.equipe-container {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -276,19 +278,8 @@ section {
 
 /* -------- FILOSOFIA -------- */
 
-.filosofia-container {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    flex-direction: column;
-    margin-left: 15vw;
-    text-align: left;
-    color: #0B528C;
-    gap: 1.5vw;
-}
-
-.filosofia-container h1 {
+.filosofia-container h1,
+.equipe-container h1 {
     width: 40vw;
     font-size: 3vw;
     font-weight: 700;
@@ -337,23 +328,23 @@ section {
 .swiper-container .swiper-pagination .swiper-pagination-bullet {
     width: 1vw;
     height: 1vw;
-  }
-  
-  .swiper-container .swiper-pagination .swiper-pagination-bullet:not(:last-child) {
-    margin-right: 0.5vw;
-  }
+}
 
-  .swiper-wrapper {
+.swiper-container .swiper-pagination .swiper-pagination-bullet:not(:last-child) {
+    margin-right: 0.5vw;
+}
+
+.swiper-wrapper {
     width: 58vw;
-  }
-  
-  .swiper-container {
+}
+
+.swiper-container {
     padding-top: 5vw;
     padding-bottom: 5vw;
     margin: 0;
-  }
-  
-  .swiper-slide {
+}
+
+.swiper-slide {
     background-position: center;
     background-size: cover;
     width: 34vw;
@@ -365,51 +356,116 @@ section {
     color: #fff;
     align-items: center;
     justify-content: center;
-  }
+}
 
-  .swiper-slide .swiper-img-texto {
+.swiper-slide .swiper-img-texto {
     display: flex;
     flex-direction: row;
     align-items: start;
     justify-content: start;
     width: 100%;
-  }
-  
-  .swiper-slide .swiper-img-texto img {
+}
+
+.swiper-slide .swiper-img-texto img {
     width: 3.5vw;
-  }
-  
-  .swiper-slide .swiper-img-texto .texto {
+}
+
+.swiper-slide .swiper-img-texto .texto {
     margin-left: 1vw;
-  }
-  
-  .swiper-slide .swiper-img-texto .texto  ul {
+}
+
+.swiper-slide .swiper-img-texto .texto ul {
     list-style-position: inside;
     padding-left: 0;
     font-size: 1.3vw;
     margin-top: 2vw;
-  }
-  
-  .swiper-slide .swiper-img-texto .texto  ul li:not(:last-child){
+}
+
+.swiper-slide .swiper-img-texto .texto ul li:not(:last-child) {
     margin-bottom: 1.2vw;
-  }
-  
-  .swiper-slide .swiper-img-texto .texto p {
+}
+
+.swiper-slide .swiper-img-texto .texto p {
     font-size: 1.2vw;
     line-height: 1.8vw;
     margin-top: 2vw;
-  }
-  
-  .swiper-slide .swiper-img-texto .texto .slide-titulo {
+}
+
+.swiper-slide .swiper-img-texto .texto .slide-titulo {
     font-size: 1.8vw;
     font-weight: 700;
     margin-top: 1vw;
-  }
-  
-  .swiper-slide .texto-p {
+}
+
+.swiper-slide .texto-p {
     margin-left: -4vw;
-  }
-  
-  .swiper-slide .texto-missao {
+}
+
+.swiper-slide .texto-missao {
     margin-top: 2.2vw;
-  }
+}
+
+/* --------- EQUIPE --------- */
+
+#equipe {
+    height: 145vh;
+}
+
+.equipe-container {
+    height: 145vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    margin-left: 15vw;
+    text-align: left;
+    color: #0B528C;
+    gap: 1.5vw;
+}
+
+.equipe-container h1 {
+    width: 45vw;
+    font-size: 3vw;
+    font-weight: 700;
+    color: #1185E3;
+}
+
+.equipe-foto {
+    display: flex;
+    gap: 6vw;
+    flex-direction: column;
+}
+
+.equipe-foto-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12vw;
+}
+
+.equipe-foto-row a {
+    text-decoration: none;
+    text-align: center;
+    color: #0B528C;
+    gap: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.equipe-foto-row a img:hover {
+    width: 17vw;
+}
+
+.equipe-foto-row a img {
+    width: 16vw;
+    transition: ease-in 0.15s;
+}
+
+.bottom-line3 {
+    position: absolute;
+    bottom: -445vh;
+    left: 0;
+    width: 100%;
+    height: 0.5vw;
+    background-color: #1285E1;
+}
