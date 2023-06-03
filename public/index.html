@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Bloomie</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.css'>
+
     <link rel="stylesheet" href="style.css">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/regular/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script src="https://kit.fontawesome.com/fec6e5d711.js" crossorigin="anonymous"></script>
@@ -31,34 +31,35 @@
     </div> -->
 
     <section id="home">
-        <nav class="navbar">
+        <nav class="navbar-nb">
             <ul class="navbar-nav">
-                <li class="nav-item nav-item1">
-                    <a href="" class="nav-link">
+                <li class="nav-item-nb nav-item1">
+                    <a href="" class="nav-link-nb">
                         <img src="/src/assets/bluBloomie.png" alt="">
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">
+                <li class="nav-item-nb">
+                    <a href="#home" class="nav-link-nb">
                         <i class="ph-bold ph-house"></i>
                         <span class="link-text">Home</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="#sobre" class="nav-link">
+
+                <li class="nav-item-nb">
+                    <a href="#sobre" class="nav-link-nb">
                         <i class="ph-bold ph-info"></i>
                         <span class="link-text">Sobre</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link">
+                <li class="nav-item-nb">
+                    <a href="#login" class="nav-link-nb">
                         <i class="ph-bold ph-user"></i>
                         <span class="link-text">Login</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link">
+                <li class="nav-item-nb">
+                    <a href="" class="nav-link-nb">
                         <i class="ph-bold ph-users"></i>
                         <span class="link-text">Parcerias</span>
                     </a>
@@ -87,16 +88,19 @@
     <section id="sobre">
         <div class="sobre-container">
             <h3>Sobre</h3>
-            <h1>A 1° rede social brasileira focada no futuro da juventude.</h1>
+            <h1>A 1° <span style="color: #1185E3;">rede social</span> brasileira focada no <span
+                    style="color: #1185E3;">futuro</span> da <span style="color: #1185E3;">juventude.</span></h1>
             <div class="sobre-row-container">
                 <img src="/src/assets/sobre-foto1.png" alt="">
                 <h2>
-                    <strong>Bloomie</strong> é a <strong>plataforma gratuita</strong> que conecta jovens do 9° ano do
-                    Ensino Fundamental ao 3° ano do Ensino Médio à <strong>oportunidades de crescimento</strong>
+                    <span style="font-weight: 600;">Bloomie</span> é a <span style="font-weight: 600;">plataforma
+                        gratuita</span> que conecta jovens do 9° ano do
+                    Ensino Fundamental ao 3° ano do Ensino Médio à <span style="font-weight: 600;">oportunidades de
+                        crescimento</span>
                     acadêmico, profissional e pessoal.
                     <br>
                     <br>
-                    <strong>Nós acreditamos no poder das oportunidades.</strong>
+                    <span style="font-weight: 600;">Nós acreditamos no poder das oportunidades.</span>
                 </h2>
             </div>
         </div>
@@ -178,7 +182,8 @@
                     style="color: #0B528C;">inovação.</span></h1>
             <div class="equipe-foto">
                 <div class="equipe-foto-row">
-                    <a href="https://www.linkedin.com/in/aylasantos/">
+                    <a href="https://www.linkedin.com/in/aylasantos/" target="_blank"
+                        onclick="window.open(this.href, '_blank'); return false;">
                         <img src="/src/assets/equipe-ayla.png" alt="">
                         <h2>Ayla Santos</h2>
                     </a>
@@ -207,7 +212,46 @@
         <div class="bottom-line3"></div>
     </section>
 
-    
+    <section id="login">
+        <div class="login-container">
+            <div class="login-card">
+                <h1>Plante o seu futuro com a Bloomie.</h1>
+                <h2>Evolua com <span style="font-weight: 600;">oportunidades incríveis</span> de desenvolvimento pessoal
+                    e profissional.<br>Tudo o que há de <span style="font-weight: 600;">melhor</span> para <span
+                        style="font-weight: 600;">você</span>.</h2>
+                <div class="login-card-comentario">
+                    <p>A Bloomie é a melhor rede social pra estudantes que buscam evolução pessoal e profissional.</p>
+                    <div class="comentario-autor">
+                        <img src="/src/assets/user-comment-img.png" alt="">
+                        <div class="comentario-autor-txt">
+                            <p style="font-weight: 700;">Fernanda Messias</p>
+                            <p>Estudante e #TeamBloomie</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="login-dots">
+                    <div class="login-dot" style="background-color: #0B528C;"></div>
+                    <div class="login-dot" style="background-color: #F2C934;"></div>
+                    <div class="login-dot" style="background-color: #fff;"></div>
+                </div>
+            </div>
+            <div class="login-form">
+                <h2>Olá novamente!</h2>
+                <h3>Ei, é ótimo ter você aqui!<br>Faça login e acesse sua conta.</h3>
+
+                <form action="" method="post">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Usuário ou Email">
+                    <span>
+                        <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha">
+                        <i class="ph-bold ph-eye-slash" id="togglePassword"></i>
+                    </span>
+                    <a href="">Esqueceu a senha?</a>
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                </form>
+                <p>Não tem conta? <a href="" style="font-weight: 500; color: #5AB5FF;">Crie agora</a></p>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <!-- place footer here -->

@@ -1,10 +1,10 @@
-// $(window).on('load', function () {
-//     setTimeout(function () {
-//         $('#splash-screen').fadeOut('slow', function () {
-//             $(this).remove();
-//         });
-//     }, 2800);
-// });
+$(window).on('load', function () {
+  setTimeout(function () {
+    $('#splash-screen').slideUp('slow', function () {
+      $(this).remove();
+    });
+  }, 2800);
+});
 
 var swiper = new Swiper(".swiper-container", {
   effect: "coverflow",
@@ -12,6 +12,7 @@ var swiper = new Swiper(".swiper-container", {
   centeredSlides: true,
   slidesPerView: "auto",
   centeredSlides: true,
+  compatibility: true,
   initialSlide: 1,
   coverflowEffect: {
     rotate: 0,
@@ -23,6 +24,31 @@ var swiper = new Swiper(".swiper-container", {
   },
   pagination: {
     el: ".swiper-pagination",
-     clickable: true
+    clickable: true
   }
+});
+
+// const togglePassword = document
+//   .querySelector('#togglePassword');
+// const password = document.querySelector('#senha');
+// togglePassword.addEventListener('click', () => {
+//   // Toggle the type attribute using
+//   // getAttribure() method
+//   const type = password
+//     .getAttribute('type') === 'password' ?
+//     'text' : 'password';
+//   password.setAttribute('type', type);
+//   // Toggle the eye and bi-eye icon
+//   this.classList.toggle('ph-eye-slash');
+// });
+
+const togglePassword = document.querySelector('#togglePassword');
+const password = document.querySelector('#senha');
+
+togglePassword.addEventListener('click', function() {
+  const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+  password.setAttribute('type', type);
+
+  this.classList.toggle('ph-eye-slash');
+  this.classList.toggle('ph-eye');
 });
