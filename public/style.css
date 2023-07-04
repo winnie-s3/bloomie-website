@@ -618,8 +618,8 @@ section {
     width: 100%;
 }
 
-.login-form form .form-control::placeholder {
-    color: #1185E3;
+.login-form form .form-control::placeholder, .cadastro-container .form-cadastro input::placeholder {
+    color: #5AB5FF;
 }
 
 .login-form form span {
@@ -646,4 +646,65 @@ section {
     margin-top: 1vw;
     font-weight: 400;
     font-size: 1.3vw;
+}
+
+/* --------- CADASTRO ---------- */
+
+.cadastro-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    color: #0B528C;
+    margin-left: 0;
+}
+
+.cadastro-container .form-cadastro {
+    height: 35vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30vw;
+}
+
+.cadastro-container .form-cadastro form {
+    width: 32vw;
+    margin-top: 1vw;
+}
+
+.cadastro-container .form-cadastro h2 {
+    font-size: 2vw;
+    
+}
+
+.cadastro-container .form-cadastro h3 {
+    font-size: 1.5vw;
+}
+
+.cadastro-container .form-cadastro input {
+    border-radius: 5vw;
+    border: solid 0.1vw #1185E3;
+    color: #1185E3;
+    height: 3.5vw;
+}
+
+.cadastro-container .form-cadastro select {
+    border-radius: 5vw;
+    border: solid 0.1vw #1185E3;
+    color: #5AB5FF;
+    height: 3.5vw;
+    margin-top: -1.5vw;
+}
+
+.cadastro-container .form-cadastro form button {
+    border-radius: 1vw;
+    width: 25vw;
+    height: 3.5vw;
+    font-size: 1.5vw;
+    font-weight: 500;
+    margin-bottom: 1vw;
+    margin-top: 1vw;
 }

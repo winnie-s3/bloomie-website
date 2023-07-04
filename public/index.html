@@ -12,6 +12,7 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.css'>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/src/assets/bluBloomie.png" />
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script src="https://kit.fontawesome.com/fec6e5d711.js" crossorigin="anonymous"></script>
@@ -20,7 +21,7 @@
 </head>
 
 <body>
-    <!-- <div id="splash-screen">
+    <div id="splash-screen">
         <img src="\src\assets\bluBloomie.png" alt="Bloomie logo">
         <div class="spinner">
             <div class="dot" style="background-color: #0C5B9C;"></div>
@@ -28,7 +29,7 @@
             <div class="dot" style="background-color: #1185E3;"></div>
             <div class="dot" style="background-color: #D1A503;"></div>
         </div>
-    </div> -->
+    </div>
 
     <section id="home">
         <nav class="navbar-nb">
@@ -56,6 +57,7 @@
                     <a href="#login" class="nav-link-nb">
                         <i class="ph-bold ph-user"></i>
                         <span class="link-text">Login</span>
+
                     </a>
                 </li>
                 <li class="nav-item-nb">
@@ -74,7 +76,7 @@
                     <h1><strong>A rede social que torna o seu sucesso, <span style="color:#F2C934;">real</span><span
                                 style="color: #1285E1;">.</span></strong></h1>
                     <h3>Oportunidades de crescimento pessoal e profissional te esperam na Bloomie.</h3>
-                    <button>Crie sua conta</button>
+                    <button onclick="window.location.href='cadastro.html'">Crie sua conta</button>
                 </div>
                 <div class="home-img">
                     <img src="/src/assets/home-png.png" alt="Menina mexendo no celular">
@@ -182,8 +184,7 @@
                     style="color: #0B528C;">inovação.</span></h1>
             <div class="equipe-foto">
                 <div class="equipe-foto-row">
-                    <a href="https://www.linkedin.com/in/aylasantos/" target="_blank"
-                        onclick="window.open(this.href, '_blank'); return false;">
+                    <a href="https://www.linkedin.com/in/aylasantos/">
                         <img src="/src/assets/equipe-ayla.png" alt="">
                         <h2>Ayla Santos</h2>
                     </a>
@@ -237,25 +238,24 @@
             </div>
             <div class="login-form">
                 <h2>Olá novamente!</h2>
-                <h3>Ei, é ótimo ter você aqui!<br>Faça login e acesse sua conta.</h3>
+                <h3>Ei, é ótimo ter você aqui!<br>Faça <span style="font-weight: 500;">login</span> e <span
+                        style="font-weight: 500;">acesse sua conta</span>.</h3>
 
                 <form action="" method="post">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Usuário ou Email">
+                    <input type="text" class="form-control" name="email" id="email" placeholder="Usuário ou Email" style="color: #1185E3;">
                     <span>
-                        <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha">
+                        <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha" style="color: #1185E3;">
                         <i class="ph-bold ph-eye-slash" id="togglePassword"></i>
                     </span>
-                    <a href="">Esqueceu a senha?</a>
+                    <a href="esqueceuSenha.html">Esqueceu a senha?</a>
                     <button type="submit" class="btn btn-primary">Entrar</button>
                 </form>
-                <p>Não tem conta? <a href="" style="font-weight: 500; color: #5AB5FF;">Crie agora</a></p>
+                <p>Não tem conta? <a href="cadastro.html" style="font-weight: 500; color: #5AB5FF;">Crie agora</a></p>
             </div>
         </div>
-    </section>
 
-    <footer>
-        <!-- place footer here -->
-    </footer>
+        <div class="bottom-line2"></div>
+    </section>
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
