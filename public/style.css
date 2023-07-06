@@ -677,7 +677,6 @@ section {
 
 .cadastro-container .form-cadastro h2 {
     font-size: 2vw;
-    
 }
 
 .cadastro-container .form-cadastro h3 {
@@ -707,4 +706,44 @@ section {
     font-weight: 500;
     margin-bottom: 1vw;
     margin-top: 1vw;
+}
+
+/* ------- PARCERIAS --------- */
+
+.parcerias-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #0B528C;
+}
+
+.parcerias-container .form-cadastro {
+    height: 35vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40vw;
+    gap: 1.3vw;
+}
+
+.parcerias-container .form-cadastro h2 {
+    font-size: 2vw;
+}
+
+.parcerias-container .form-cadastro h3 {
+    font-size: 1.5vw;
+}
+
+.parcerias-container .form-cadastro button {
+    width: 20vw;
+    font-size: 1.3vw;
+    font-weight: 600;
+    height: 2.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
