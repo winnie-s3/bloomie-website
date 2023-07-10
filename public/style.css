@@ -640,6 +640,8 @@ section {
     height: 3.5vw;
     font-weight: 500;
     font-size: 1.5vw;
+    background-color: #1185E3;
+    border: #1185E3;
 }
 
 .login-form p {
@@ -670,9 +672,27 @@ section {
     width: 30vw;
 }
 
+.cadEmpresa-container .form-cadastro .txt2 {
+    white-space: nowrap;
+    margin-top: -0.5vw;
+    color: #1185E3;
+}
+
 .cadastro-container .form-cadastro form {
     width: 32vw;
     margin-top: 1vw;
+}
+
+.cadastro-container .form-cadastro form span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cadastro-container .form-cadastro form span i {
+    margin-left: -3vw;
+    font-size: 1.6vw;
+    cursor: pointer;
 }
 
 .cadastro-container .form-cadastro h2 {
@@ -698,14 +718,33 @@ section {
     margin-top: -1.5vw;
 }
 
+.cadEmpresa-container .form-cadastro select {
+    border-radius: 5vw;
+    border: solid 0.1vw #1185E3;
+    color: #5AB5FF;
+    height: 3.5vw;
+    margin-top: 0;
+}
+
 .cadastro-container .form-cadastro form button {
     border-radius: 1vw;
     width: 25vw;
-    height: 3.5vw;
+    height: 3vw;
     font-size: 1.5vw;
     font-weight: 500;
     margin-bottom: 1vw;
     margin-top: 1vw;
+    background-color: #1185E3;
+    border: #1185E3;
+}
+
+.PEMEB-container .form-cadastro {
+    display: flex;
+    gap: 0.5vw;
+}
+
+.cadastro-container .form-cadastro img {
+    width: 10vw;
 }
 
 /* ------- PARCERIAS --------- */
