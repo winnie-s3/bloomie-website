@@ -66,14 +66,21 @@
         <h3 class="text-center" style="font-weight: 400;"><span style="font-weight: 500;">Calma!</span> Informe o email associado à sua conta para redefinirmos sua senha.</h3>
         <form class="row g-3">
           <div class="col-md-12">
-            <input type="password" class="form-control" id="novaSenha" placeholder="Nova senha" required>
-            <i class="ph-bold ph-eye-slash" id="togglePassword"></i>
+            <span>
+              <input type="password" class="form-control" name="senha" id="senha" placeholder="Nova senha"
+                style="color: #1185E3;">
+              <i class="ph-bold ph-eye-slash" id="togglePassword"></i>
+            </span>
           </div>
           <div class="col-md-12">
-            <input type="password" class="form-control" id="novaSenha2" placeholder="Confirme a nova senha" required>
+            <span>
+              <input type="password" class="form-control" name="senha" id="senha" placeholder="Confirme nova senha"
+                style="color: #1185E3;">
+              <i class="ph-bold ph-eye-slash" id="togglePassword"></i>
+            </span>
           </div>
           <div class="col-md-12 text-center btn-lg">
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" class="btn btn-primary">Redefinir senha</button>
             <p style="color: #5AB5FF;">Lembrou a senha? <a href="/public/index.html#login" style="font-weight: 500; color: #4fb0ff;">Faça login</a></p>
           </div>
         </form>
