@@ -38,3 +38,17 @@ togglePassword.addEventListener('click', function() {
   this.classList.toggle('ph-eye-slash');
   this.classList.toggle('ph-eye');
 });
+
+
+  function toggleText() {
+    var contentDiv = document.querySelector('.content');
+    var toggleBtn = document.querySelector('.toggle-btn');
+
+    if (contentDiv.classList.contains('expanded')) {
+      contentDiv.classList.remove('expanded');
+      toggleBtn.textContent = 'Ler mais';
+    } else {
+      contentDiv.classList.add('expanded');
+      toggleBtn.textContent = 'Ler menos';
+    }
+  }
