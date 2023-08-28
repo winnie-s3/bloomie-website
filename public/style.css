@@ -934,6 +934,10 @@ input[type="file"] {
     position: absolute;
     top: 0;
     right: 0;
+    width: 18.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .rightsidebar-group {
@@ -943,14 +947,16 @@ input[type="file"] {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 17vw;
 }
 
 .line-division {
     height: 100vh;
     width: 0.1vw;
-    background-color: red;
+    background-color: #88C2F1;
     position: absolute;
     top: 0;
+    right: 18.5vw;
 }
 
 .rightsidebar-container-1, .rightsidebar-container-2 {
