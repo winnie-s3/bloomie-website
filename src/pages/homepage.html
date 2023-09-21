@@ -26,10 +26,10 @@
       <ul class="navbar-nav me-auto mt-2 mt-lg-0">
         <li class="nav-item">
           <!-- <button type="button" class="btn btn-link">Postagens</button> -->
-          <button type="button" class="btn">Postagens</button>
+          <button type="button" id="btnPostagens" class="btn" onclick="mostrarPostagens()">Postagens</button>
         </li>
         <li class="nav-item">
-          <button type="button" class="btn">Oportunidades</button>
+          <button type="button" id="btnOportunidades" class="btn" onclick="mostrarOportunidades()">Oportunidades</button>
         </li>
       </ul>
     </div>
@@ -80,13 +80,13 @@
           </div>
         </div>
       </div>
-      <div class="col-8 d-flex justify-content-center">
-        <div class="row-cols-1 justify-content-center align-items-center g-0 col-12">
+
+      <div class="col-8 d-flex justify-content-center pg-postagens">
+        <div id="feed-postagens" class="row-cols-1 justify-content-center align-items-center g-0 col-12">
           <div class="col-12 d-flex justify-content-center">
             <form action="" method="get" class="col-10 form-post">
               <div class="col-12 row-cols-1">
                 <div class="col form-msg-post">
-                  <!-- <input type="text" class="col-12 post-section multiline-input" placeholder="Algo para compartilhar? Deixe florescer!"> -->
                   <textarea class="col-12 post-section multiline-input" rows="3" name="usrtxt" wrap="hard" placeholder="Algo para compartilhar? Deixe florescer!"></textarea>
                 </div>
                 <div class="col op-form" style="background-color: #E6F4FF;">
@@ -106,25 +106,6 @@
                 </div>
               </div>
             </form>
-            <!-- <div class="col-10 d-flex flex-column justify-content-center bg-primary">
-              <input type="text" class="col-12 post-section" placeholder="Algo para compartilhar? Deixe florescer!">
-              <div class="col-12">
-                <form action="" method="get"
-                  style="display: flex; justify-content: space-between; align-items: center;">
-                  <span>
-                    <label for="uploadImagem" class="custom-upload-btn">
-                      <i class="ph ph-image"></i>
-                    </label>
-                    <label for="uploadArquivo" class="custom-upload-btn">
-                      <i class="ph ph-file"></i>
-                    </label>
-                    <input type="file" name="imagem" id="uploadImagem" accept="image/*" size="5000000">
-                    <input type="file" name="arquivo" id="uploadArquivo" accept="*/*" size="5000000">
-                  </span>
-                  <input type="submit" value="Enviar">
-                </form>
-              </div>
-            </div> -->
           </div>
           <div class="col-12 d-flex justify-content-center bg-warning" id="feed">
             <div class="row-cols-1 justify-content-center align-items-center g-2 col-10 bg-primary p-4">
@@ -170,8 +151,8 @@
           </div>
         </div>
       </div>
-      <div class="col-2 rightsidebar p-0">
-        <div class="row-cols-1 justify-content-center align-items-center rightsidebar-group">
+      <div class="col-2 rightsidebar p-0 pg-postagens-leftSidebar ">
+        <div id="sidebar-postagens" class="row-cols-1 justify-content-center align-items-center rightsidebar-group">
           <div class="col rounded text-center">
             <div class="container rightsidebar-container-1">
               <div class="row-cols-1 destaques justify-content-center align-items-center g-0">
@@ -250,6 +231,185 @@
                         <span style="display: flex; flex-direction: column; text-align: start;">
                           <p style="font-weight: 500;">Ayla Santos</p>
                           <p style="font-size: 1vw;">@aylasantos</p>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line-division"></div>
+      </div>
+
+      <div class="col-8 d-flex justify-content-center pg-oportunidades ">
+        <div id="feed-oportunidades" class="row-cols-1 justify-content-center align-items-center g-0 col-12 conteudo">
+          <div class="col-12 justify-content-center align-items-center">
+            <div class="row-cols-1 justify-content-center align-items-center g-2">
+              <div class="col row-cols-1 justify-content-center align-items-center g-2">
+                <div class="col">
+                  <h2>Tem oportunidade quentinha por aqui, (usuário)!</h2>
+                  <p>Recomendações com base no seu perfil:</p>
+                  <select class="" name="" id="">
+                    <option selected>Filtrar por</option>
+                    <option value="">New Delhi</option>
+                    <option value="">Istanbul</option>
+                    <option value="">Jakarta</option>
+                  </select>
+                </div>
+                <div class="col-12 bg-warning">
+                  <div class="row-cols-2 justify-content-center align-items-center g-2 d-flex flex-row">
+                    <div class="col">
+                      <img src="https://source.unsplash.com/random/180x180" alt="">
+                    </div>
+                    <div class="col row-cols-1 justify-content-center align-items-center g-2">
+                      <div class="col">
+                        <p>OBInvest</p>
+                        <p>Prazo: 22/06/2023</p>
+                      </div>
+                      <div class="col">
+                        <p>A Olímpiada Brasileira de Investimentos está com as inscrições abertas e você não pode... Ler
+                          mais.</p>
+                        <span>
+                          <p>Competição</p>
+                          <p>Olimpíada</p>
+                        </span>
+                      </div>
+                      <div class="col">
+                        <button type="button" class="btn btn-primary col-12">Acessar oportunidade</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col row-cols-1 justify-content-center align-items-center g-2">
+                <div class="col">
+                  <span>
+                    <h2>Estágios</h2>
+                    <p>Crescimento profissional</p>
+                  </span>
+                </div>
+                <div class="col bg-warning">
+                  <div class="row-cols-2 justify-content-center align-items-center g-2 d-flex flex-row">
+                    <div class="col">
+                      <div class="row-cols-1 justify-content-center align-items-center g-2">
+                        <div class="col image-container">
+                          <img src="https://source.unsplash.com/random/180x180" alt="">
+                          <div class="overlay">Texto de Sobreposição</div>
+                        </div>
+                        <div class="col">
+                          <p>Estágio na Gloogle</p>
+                          <p>Prazo: 22/06/2023</p>
+                          <p>Faixa etária: 16 - 17 anos</p>
+                        </div>
+                        <div class="col">
+                          <button type="button" class="btn btn-primary">Saiba mais</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="row-cols-1 justify-content-center align-items-center g-2">
+                        <div class="col image-container">
+                          <img src="https://source.unsplash.com/random/180x180" alt="">
+                          <div class="overlay">Texto de Sobreposição</div>
+                        </div>
+                        <div class="col">
+                          <p>Estágio na Gloogle</p>
+                          <p>Prazo: 22/06/2023</p>
+                          <p>Faixa etária: 16 - 17 anos</p>
+                        </div>
+                        <div class="col">
+                          <button type="button" class="btn btn-primary">Saiba mais</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2 rightsidebar p-0 pg-oportunidades-leftSidebar">
+        <div id="sidebar-oportunidades" class="row-cols-1 justify-content-center align-items-center rightsidebar-group conteudo">
+          <div class="col rounded text-center">
+            <div class="container rightsidebar-container-1">
+              <div class="row-cols-1 destaques justify-content-center align-items-center g-0">
+                <div class="col destaques-top text-nowrap">
+                  <p style="color: #1289EA; font-weight: 500;">Destaques da semana</p>
+                  <p style="color: #DBAC01; font-weight: 500;">Arraste e confira!</p>
+                </div>
+                <div class="col text-start destaques-post">
+                  <span style="display:flex; flex-direction: collumn;" class="destaques-post-user">
+                    <p>Estágio na ONU</p>
+                    <p>Prazo: 21/03/2024</p>
+                    <p>Faixa etária: 16 - 19 anos</p>
+                  </span>
+                  <div style="display:flex; flex-direction: column;" class="destaques-post-text">
+                    <p>Venha trabalhar conosco na Organização das Nações Unidas... Ler mais.</p>
+                    <span class="destaques-post-tags">
+                      <p style="background-color: #F2C934;">#educação</p>
+                      <p style="background-color: #5AB5FF;">#redesocial</p>
+                    </span>
+                  </div>
+                </div>
+                <div class="col dots"
+                  style="display:flex; flex-direction: row; justify-content: center; align-items: center;">
+                  <div class="dot" style="background-color: #1185E3;"></div>
+                  <div class="dot" style="background-color: #0C5D9E;"></div>
+                  <div class="dot" style="background-color: #DBAC01;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col rounded text-center">
+            <div class="container rightsidebar-container-2">
+              <div class="row-cols-1 justify-content-center align-items-center g-0">
+                <div class="col destaques-bloomigos">
+                  <p style="color: #1289EA; font-weight: 500;">Dica da Blu!</p>
+                  <p style="color: #DBAC01; font-weight: 500;">Oportunidades sugeridas pela florzinha azul.</p>
+                </div>
+                <div class="col">
+                  <div class="rows-cols-1 justify-content-center align-items-center g-2">
+                    <div class="col destaques-bloomigos-user">
+                      <span style="display:flex; flex-direction: row;">
+                        <img src="https://source.unsplash.com/random" alt=""
+                          style="border-radius: 100%; width: 3vw; height: 3vw;">
+                        <span style="display: flex; flex-direction: column; text-align: start;">
+                          <p style="font-weight: 500;">Oportunidade 1</p>
+                          <p style="font-size: 1vw;">Saiba mais.</p>
+                        </span>
+                      </span>
+                    </div>
+                    <div class="col destaques-bloomigos-user">
+                      <span style="display:flex; flex-direction: row;">
+                        <img src="https://source.unsplash.com/random" alt=""
+                          style="border-radius: 100%; width: 3vw; height: 3vw;">
+                        <span style="display: flex; flex-direction: column; text-align: start;">
+                          <p style="font-weight: 500;">Oportunidade 2</p>
+                          <p style="font-size: 1vw;">Saiba mais.</p>
+                        </span>
+                      </span>
+                    </div>
+                    <div class="col destaques-bloomigos-user">
+                      <span style="display:flex; flex-direction: row;">
+                        <img src="https://source.unsplash.com/random" alt=""
+                          style="border-radius: 100%; width: 3vw; height: 3vw;">
+                        <span style="display: flex; flex-direction: column; text-align: start;">
+                          <p style="font-weight: 500;">Oportunidade 3</p>
+                          <p style="font-size: 1vw;">Saiba mais.</p>
+                        </span>
+                      </span>
+                    </div>
+                    <div class="col destaques-bloomigos-user">
+                      <span style="display:flex; flex-direction: row;">
+                        <img src="https://source.unsplash.com/random" alt=""
+                          style="border-radius: 100%; width: 3vw; height: 3vw;">
+                        <span style="display: flex; flex-direction: column; text-align: start;">
+                          <p style="font-weight: 500;">Oportunidade 4</p>
+                          <p style="font-size: 1vw;">Saiba mais.</p>
                         </span>
                       </span>
                     </div>

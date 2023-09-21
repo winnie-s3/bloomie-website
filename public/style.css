@@ -867,7 +867,7 @@ input[type="file"] {
     align-items: center;
 }
 
-.op-form input{
+.op-form input {
     padding: 0.2vw 3vw 0.2vw 3vw;
 }
 
@@ -889,7 +889,7 @@ input[type="file"] {
     font-size: 1.3vw;
 }
 
-.op-form span .custom-upload-btn{
+.op-form span .custom-upload-btn {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -959,18 +959,21 @@ input[type="file"] {
     right: 18.5vw;
 }
 
-.rightsidebar-container-1, .rightsidebar-container-2 {
+.rightsidebar-container-1,
+.rightsidebar-container-2 {
     background-color: #F2F9FF;
     border: 0.2vw solid #E3F2FF;
     border-radius: 15px;
 }
 
-.destaques-top p:nth-child(2), .destaques-bloomigos p:nth-child(2) {
+.destaques-top p:nth-child(2),
+.destaques-bloomigos p:nth-child(2) {
     font-size: 1.1vw;
     white-space: nowrap;
 }
 
-.destaques-top p:nth-child(1), .destaques-bloomigos p:nth-child(1) {
+.destaques-top p:nth-child(1),
+.destaques-bloomigos p:nth-child(1) {
     margin-bottom: -0.3vw;
     font-size: 1.5vw;
 }
@@ -981,7 +984,8 @@ input[type="file"] {
     border-radius: 100%;
 }
 
-.destaques-post .destaques-post-user, .destaques-bloomigos-user {
+.destaques-post .destaques-post-user,
+.destaques-bloomigos-user {
     display: flex;
     justify-content: start;
     align-items: start;
@@ -989,7 +993,8 @@ input[type="file"] {
     margin-bottom: 1vw;
 }
 
-.destaques-post .destaques-post-user span p, .destaques-bloomigos-user span p {
+.destaques-post .destaques-post-user span p,
+.destaques-bloomigos-user span p {
     margin-left: 0.5vw;
     margin-bottom: 0;
 }
@@ -1000,7 +1005,7 @@ input[type="file"] {
 }
 
 .destaques-post-tags {
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: left;
     align-items: center;
@@ -1070,4 +1075,36 @@ input[type="file"] {
 .rightside-op-post span {
     display: flex;
     flex-direction: row;
+}
+
+.conteudo {
+    display: none;
+    position: absolute;
+}
+
+/* OVERLAY IMAGEM OPORTUNIDADES */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Cor de fundo para a sobreposição */
+    color: white;
+    /* Cor do texto */
+    padding: 10px;
+    /* Espaçamento interno do texto */
+    opacity: 0;
+    /* A sobreposição fica invisível inicialmente */
+    transition: opacity 0.3s;
+    /* Transição suave da opacidade */
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+    /* Torna a sobreposição visível quando o mouse está sobre a imagem */
 }

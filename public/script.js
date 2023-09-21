@@ -31,7 +31,7 @@ var swiper = new Swiper(".swiper-container", {
 const togglePassword = document.querySelector('#togglePassword');
 const password = document.querySelector('#senha');
 
-togglePassword.addEventListener('click', function() {
+togglePassword.addEventListener('click', function () {
   const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
   password.setAttribute('type', type);
 
@@ -40,15 +40,42 @@ togglePassword.addEventListener('click', function() {
 });
 
 
-  function toggleText() {
-    var contentDiv = document.querySelector('.content');
-    var toggleBtn = document.querySelector('.toggle-btn');
+function toggleText() {
+  var contentDiv = document.querySelector('.content');
+  var toggleBtn = document.querySelector('.toggle-btn');
 
-    if (contentDiv.classList.contains('expanded')) {
-      contentDiv.classList.remove('expanded');
-      toggleBtn.textContent = 'Ler mais';
-    } else {
-      contentDiv.classList.add('expanded');
-      toggleBtn.textContent = 'Ler menos';
-    }
+  if (contentDiv.classList.contains('expanded')) {
+    contentDiv.classList.remove('expanded');
+    toggleBtn.textContent = 'Ler mais';
+  } else {
+    contentDiv.classList.add('expanded');
+    toggleBtn.textContent = 'Ler menos';
   }
+}
+
+// ALTERNAR ENTRE POSTAGENS E OPORTUNIDADES
+
+// Função para mostrar o conteúdo das oportunidades
+function mostrarOportunidades() {
+  document.getElementById("feed-oportunidades").classList.remove('conteudo');
+  document.getElementById("sidebar-oportunidades").classList.remove('conteudo');
+  document.getElementById("feed-postagens").classList.add('conteudo');
+  document.getElementById("sidebar-postagens").classList.add('conteudo');
+  console.log('oioi');
+}
+
+// Função para mostrar o conteúdo das postagens
+function mostrarPostagens() {
+  document.getElementById("feed-oportunidades").classList.add('conteudo');
+  document.getElementById("sidebar-oportunidades").classList.add('conteudo');
+  document.getElementById("feed-postagens").classList.remove('conteudo');
+  document.getElementById("sidebar-postagens").classList.remove('conteudo');
+  console.log('oioipostagens');
+}
+
+// Adicione ouvintes de eventos aos botões
+document.getElementById("btnOportunidades").addEventListener("click", mostrarOportunidades);
+document.getElementById("btnPostagens").addEventListener("click", mostrarPostagens);
+
+// Mostrar as oportunidades por padrão ao carregar a página
+mostrarPostagens();
