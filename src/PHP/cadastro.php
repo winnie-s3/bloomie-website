@@ -1,16 +1,16 @@
 <?php
 include ("connect.php");
 
-// Defina as variáveis a partir dos valores do formulário
-
-$nome = $_POST['inputNome']; 
-$sobrenome = $_POST['inputSobrenome'];
-$email = $_POST['inputEmail']; 
-$usuario = $_POST['inputUsuario']; 
-$senha = $_POST['senha']; 
-
 // Verifique se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Verifique se os campos do formulário foram definidos
+    if (isset($_POST['inputNome'], $_POST['inputSobrenome'], $_POST['inputEmail'], $_POST['inputUsuario'], $_POST['senha'])) {
+        // Defina as variáveis a partir dos valores do formulário
+        $nome = $_POST['inputNome']; 
+        $sobrenome = $_POST['inputSobrenome'];
+        $email = $_POST['inputEmail']; 
+        $usuario = $_POST['inputUsuario']; 
+        $senha = $_POST['senha']; 
 
     // Gere um hash seguro para a senha
     $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Cadastro realizado com sucesso!";
         } else {
             // Erro ao executar a consulta SQL
-            echo "Erro ao cadastrar o usuário: " . $stmt->error;
+            echo "Erro ao cadastrar o usuário. " . $stmt->error;
         }
 
         // Feche a declaração
@@ -40,11 +40,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Feche a conexão com o banco de dados
     $connect->close();
+    }}
 
-} else {
-    echo "Formulário não enviado";
-}
-
+    include("../pages/cadastro.html")
 
 ?>
 
