@@ -1,3 +1,5 @@
 <?php
 
-$conn = newmysqli('localhost', 'root', '', 'bloomie_bd')
+$connect = newmysqli('localhost', 'root', '', 'bloomie_bd')
+
+?>
