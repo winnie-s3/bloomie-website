@@ -1430,6 +1430,276 @@ input[type="file"] {
         font-size: 25px;
         text-align: left;
     }
+
+    /* EQUIPE */
+
+    #equipe {
+        height: 105vh;
+    }
+    
+    .equipe-container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        margin-left: 15vw;
+        text-align: left;
+        color: #0B528C;
+        gap: 1.5vw;
+    }
+    
+    .equipe-container h2 {
+        font-size: 2vw;
+        font-weight: 700;
+    }
+    
+    .equipe-foto {
+        display: flex;
+        gap: 6vw;
+        flex-direction: column;
+    }
+    
+    .equipe-foto-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 12vw;
+    }
+    
+    .equipe-foto-row a {
+        text-decoration: none;
+        text-align: center;
+        color: #0B528C;
+        gap: 2vw;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .equipe-foto-row a img:hover {
+        width: 17vw;
+    }
+    
+    .equipe-foto-row a img {
+        width: 16vw;
+        transition: ease-in 0.15s;
+    }
+    
+    .bottom-line3 {
+        position: absolute;
+        bottom: -402vh;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background-color: #1285E1;
+    }
+
+    /* --- LOGIN --- */
+    .login-container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        text-align: left;
+        color: #0B528C;
+        margin-left: 0;
+        width: 100vw;
+    }
+    
+    .login-card {
+        background-color: #1285E1;
+        height: 35vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding: 2.5vw;
+        width: 32vw;
+        color: #fff;
+        border-radius: 1vw;
+    }
+    
+    .login-card h1 {
+        font-size: 2vw;
+        width: 20vw;
+        font-weight: 700;
+    }
+    
+    .login-card h2 {
+        font-size: 1.5vw;
+        font-weight: 400;
+        margin-top: 1vw;
+    }
+    
+    .login-card-comentario {
+        background-color: #0B528C;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2vw;
+        padding: 1.5vw 2vw;
+        border-radius: 2.5vw;
+        font-size: 1.3vw;
+        gap: 1vw;
+    }
+    
+    .login-card-comentario p {
+        margin: 0;
+    }
+    
+    .comentario-autor {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5vw;
+    }
+    
+    .comentario-autor img {
+        width: 3vw;
+        height: 3vw;
+    }
+    
+    .login-dots {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        margin-top: 1.5vw;
+        gap: 0.8vw;
+    }
+    
+    .login-dot {
+        width: 1.6vw;
+        height: 1.6vw;
+        border-radius: 100%;
+    }
+    
+    .login-form {
+        height: 35vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 2.5vw;
+        width: 32vw;
+    }
+    
+    .login-form h2 {
+        font-weight: 700;
+    }
+    
+    .login-form h3 {
+        font-weight: 400;
+        font-size: 1.5vw;
+        margin-bottom: 3vw;
+    }
+    
+    .login-form form {
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+    }
+    
+    .login-form form a {
+        margin-top: -1vw;
+        text-align: right;
+        font-weight: 500;
+        color: #5AB5FF;
+    }
+    
+    .login-form form .form-control {
+        border-radius: 5vw;
+        border: solid 0.1vw #1185E3;
+        width: 22vw;
+        height: 3.5vw;
+    }
+    
+    .login-form form span .form-control {
+        width: 100%;
+    }
+    
+    .login-form form .form-control::placeholder,
+    .cadastro-container .form-cadastro input::placeholder {
+        color: #5AB5FF;
+    }
+    
+    .login-form form span {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .login-form form span i {
+        margin-left: -3vw;
+        font-size: 1.6vw;
+        cursor: pointer;
+    }
+    
+    .login-form form button {
+        border-radius: 1vw;
+        width: 22vw;
+        height: 3.5vw;
+        font-weight: 500;
+        font-size: 1.5vw;
+        background-color: #1185E3;
+        border: #1185E3;
+    }
+    
+    .login-form p {
+        margin-top: 1vw;
+        font-weight: 400;
+        font-size: 1.3vw;
+    }
+
+    /* --- PARCERIAS --- */
+    .parcerias-container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        color: #0B528C;
+    }
+    
+    .parcerias-container .form-cadastro {
+        height: 35vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 60vw;
+        gap: 1.3vw;
+    }
+    
+    .parcerias-container .form-cadastro h2 {
+        font-size: 3vw;
+    }
+    
+    .parcerias-container .form-cadastro h3 {
+        font-size: 2.5vw;
+    }
+    
+    .parcerias-container .form-cadastro button {
+        width: 20vw;
+        font-size: 1.3vw;
+        font-weight: 600;
+        height: 2.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    input[type="file"] {
+        display: none;
+    }
+
+    .pemeb a .btn {
+        font-size: 3vw;
+        height: 5vw;
+        width: 30vw;
+    }
 }
 
 @media only screen and (max-width: 425px) {
@@ -1557,8 +1827,7 @@ input[type="file"] {
         width: 75vw;
     }
 
-    .filosofia-container h1,
-    .equipe-container h1 {
+    .filosofia-container h1 {
         width: 75vw;
         font-size: 25px;
         font-weight: 700;
@@ -1682,5 +1951,111 @@ input[type="file"] {
         width: 75vw;
         font-size: 20px;
         text-align: left;
+    }
+
+    /* EQUIPE */
+
+    #equipe {
+        height: 105vh;
+    }
+    
+    .equipe-container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        margin-left: 5vw;
+        text-align: left;
+        color: #0B528C;
+        gap: 1.5vw;
+    }
+    
+    .equipe-container h2 {
+        font-size: 3.5vw;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+    
+    .equipe-foto {
+        display: flex;
+        gap: 5vw;
+        flex-direction: column;
+    }
+    
+    .equipe-foto-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 4vw;
+    }
+    
+    .equipe-foto-row a {
+        text-decoration: none;
+        text-align: center;
+        color: #0B528C;
+        gap: 2vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .equipe-foto-row a img:hover {
+        width: 26vw;
+    }
+    
+    .equipe-foto-row a img {
+        width: 25vw;
+        transition: ease-in 0.15s;
+    }
+    
+    .bottom-line3 {
+        position: absolute;
+        bottom: -402vh;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background-color: #1285E1;
+    }
+
+    .equipe-container h1 {
+        font-size: 25px;
+        width: 280px;
+    }
+
+    /* --- PARCERIAS --- */
+    .parcerias-container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        color: #0B528C;
+    }
+    
+    .parcerias-container .form-cadastro {
+        height: 35vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 90vw;
+        gap: 1.3vw;
+    }
+    
+    .parcerias-container .form-cadastro h2 {
+        font-size: 20px;
+    }
+    
+    .parcerias-container .form-cadastro h3 {
+        font-size: 15px;
+    }
+
+    .pemeb a .btn {
+        font-size: 20px;
+        height: 30px;
+        width: 45vw;
     }
 }
