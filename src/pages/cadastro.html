@@ -22,42 +22,7 @@
 </head>
 
 <body>
-  <nav class="navbar-nb">
-    <ul class="navbar-nav">
-      <li class="nav-item-nb nav-item1">
-        <a href="/public/index.html" class="nav-link-nb">
-          <img src="/src/assets/bluBloomie.png" alt="">
-        </a>
-      </li>
 
-      <li class="nav-item-nb">
-        <a href="/public/index.html#home" class="nav-link-nb">
-          <i class="ph-bold ph-house"></i>
-          <span class="link-text">Home</span>
-        </a>
-      </li>
-
-      <li class="nav-item-nb">
-        <a href="/public/index.html#sobre" class="nav-link-nb">
-          <i class="ph-bold ph-info"></i>
-          <span class="link-text">Sobre</span>
-        </a>
-      </li>
-      <li class="nav-item-nb">
-        <a href="/public/index.html#login" class="nav-link-nb">
-          <i class="ph-bold ph-user"></i>
-          <span class="link-text">Login</span>
-
-        </a>
-      </li>
-      <li class="nav-item-nb">
-        <a href="/public/index.html#parcerias" class="nav-link-nb">
-          <i class="ph-bold ph-users"></i>
-          <span class="link-text">Parcerias</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
 
   <section id="cadastro">
     <div class="cadastro-container">
@@ -66,7 +31,7 @@
         <h3 class="text-center" style="font-weight: 400;">Acesse oportunidades incríveis!<br><span
             style="font-weight: 500;">Crie sua conta</span> e <span style="font-weight: 500;">junte-se à
             Bloomie.</span></h3>
-        <form class="row g-3">
+        <form class="row g-3" method="post">
           <div class="col-md-6">
             <input type="text" class="form-control" id="inputNome" placeholder="Nome">
           </div>
@@ -98,10 +63,22 @@
             <select class="form-select align-text-bottom" id="dobyear"></select>
           </div>
 
+          <p>Estado e Cidade</p>
+          <div class="col-md-6">
+            <select id="uf">
+              <option></option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <select id="cidade">
+              <option></option>
+            </select>
+          </div>
+
           <div class="col-md-12 text-center btn-lg">
             <p style="color: #5AB5FF;">Ao clicar em "Criar Conta", você aceita nosso Termos, Política de
               Privacidade e Política de Cookies. <a href="" style="font-weight: 500; color: #4fb0ff;">Saiba mais</a></p>
-            <a href=""><button type="submit" class="btn btn-primary">Criar conta</button></a>
+            <button type="submit" class="btn btn-primary">Criar conta</button>
             <p>Já tem conta? <a href="/public/index.html#login" style="font-weight: 500; color: #5AB5FF;">Faça login</a>
             </p>
           </div>
@@ -126,9 +103,9 @@
         daySelector: '#dobday', /* Required */
         monthSelector: '#dobmonth', /* Required */
         yearSelector: '#dobyear', /* Required */
-        dayDefault: 'Now', /* Optional */
-        monthDefault: 'Month', /* Optional */
-        yearDefault: 'Year', /* Optional */
+        dayDefault: 'Dia', /* Optional */
+        monthDefault: 'Mês', /* Optional */
+        yearDefault: 'Ano', /* Optional */
         minimumAge: 14, /* Optional */
         maximumAge: 100 /* Optional */
       });
