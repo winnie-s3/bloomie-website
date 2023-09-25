@@ -1,6 +1,7 @@
 <?php
+include ("connect.php");
 
-include ("../config/connect.php"); 
+// Defina as variáveis a partir dos valores do formulário
 
 $nome = $_POST['inputNome']; 
 $sobrenome = $_POST['inputSobrenome'];
@@ -10,11 +11,6 @@ $senha = $_POST['senha'];
 
 // Verifique se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nome = $_POST['inputNome'];
-    $sobrenome = $_POST['inputSobrenome'];
-    $email = $_POST['inputEmail'];
-    $usuario = $_POST['inputUsuario'];
-    $senha = $_POST['senha'];
 
     // Gere um hash seguro para a senha
     $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
@@ -50,7 +46,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 
-
- // include("../pages/cadastro.html")
- 
 ?>
+
+
