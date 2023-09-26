@@ -7,4 +7,4 @@ if ($connect->connect_error) {
 }
  // else { echo "Conexão bem-sucedida com o banco de dados!"; 
 
-    ?>
+?>
