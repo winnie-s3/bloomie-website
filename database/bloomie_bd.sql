@@ -226,7 +226,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `ID_usuario` int NOT NULL AUTO_INCREMENT,
   `usuario` varchar(32) NOT NULL,
   `email` varchar(256) NOT NULL,
-  `data_criacao` dat  etime NOT NULL,
+  `data_criacao` datetime NOT NULL,
   `senha` varchar(128) NOT NULL DEFAULT '',
   `nome` varchar(32) NOT NULL DEFAULT '',
   `sobrenome` varchar(32) NOT NULL DEFAULT '',
