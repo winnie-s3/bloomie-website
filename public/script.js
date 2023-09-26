@@ -92,9 +92,10 @@ uf.addEventListener('change', async function () {
   console.log(response.length);
 let options = ''
   response.forEach(function (cidades) {
-    options += '<option>' + cidades.nome + '</option>'
+    options += `<option name="cidade">` + cidades.nome + '</option>'
   });
 cidade.innerHTML = options;
+
 });
 
 window.addEventListener('load', async ()=> {
@@ -105,7 +106,7 @@ window.addEventListener('load', async ()=> {
   const options = document.createElement("optgroup")
   options.setAttribute('label', 'UFS')
   response.forEach(function(uf) {
-    options.innerHTML += '<option>' + uf.sigla + '</option>'
+    options.innerHTML += `<option name="estado">` + uf.sigla + '</option>'
 
   response.forEach(function(uf) {
     console.log(uf.sigla)

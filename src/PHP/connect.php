@@ -1,10 +1,19 @@
 <?php
 
-$connect = new mysqli('localhost', 'root', '', 'bloomie_db'); 
+    $dbHost = 'localhost';
+    $dbUsername = 'root';
+    $dbPassword = 'root';
+    $dbName = 'bloomie_db';
+    
+    $conexao = new mysqli('localhost', 'root', 'root', 'bloomie_db','3306');
 
-if ($connect->connect_error) {
-    die("Erro na conexão com o banco de dados. " . $db->connect_error);
-}
- // else { echo "Conexão bem-sucedida com o banco de dados!"; 
+    // if($conexao->connect_errno)
+    // {
+    //     echo "Erro";
+    // }
+    // else
+    // {
+    //     echo "Conexão efetuada com sucesso";
+    // }
 
 ?>

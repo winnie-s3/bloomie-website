@@ -93,16 +93,16 @@
             Bloomie.</span></h3>
         <form class="row g-3" method="post" action="/src/PHP/cadastro.php" class="form-cadastro-usuario">
           <div class="col-md-6">
-            <input type="text" class="form-control" name="nome" id="inputNome" placeholder="Nome">
+            <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome">
           </div>
           <div class="col-md-6">
-            <input type="text" class="form-control" name="inputSobrenome" id="inputSobrenome" placeholder="Sobrenome">
+            <input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="Sobrenome">
           </div>
           <div class="col-12">
-            <input type="email" class="form-control" name="inputEmail" id="inputEmail" placeholder="Email">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Email">
           </div>
           <div class="col-md-6">
-            <input type="text" class="form-control" name="inputUsuario" id="inputUsuario" placeholder="Nome de usuário">
+            <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Nome de usuário">
           </div>
           <div class="col-md-6">
             <span>
@@ -114,19 +114,19 @@
 
           <p style="margin-bottom: 5px;">Data de nascimento</p>
           <div class="col-md-4 col-sm-4">
-            <select class="form-select align-text-bottom" id="dobday"></select>
+            <select class="form-select align-text-bottom" id="dobday" name="dia"></select>
           </div>
           <div class="col-md-4 col-sm-4">
-            <select class="form-select align-text-bottom" id="dobmonth"></select>
+            <select class="form-select align-text-bottom" id="dobmonth" name="mes"></select>
           </div>
           <div class="col-md-4 col-sm-4">
-            <select class="form-select align-text-bottom" id="dobyear"></select>
+            <select class="form-select align-text-bottom" id="dobyear" name="ano"></select>
           </div>
 
           <p style="margin-bottom: -5px;">Estado e Cidade</p>
           <div class="col-md-6 col-sm-6 estado_cidade">
-            <select id="uf">
-              <option>Estado</option>
+            <select id="uf" >
+              <option value="">Estado</option>
             </select>
           </div>
           <div class="col-md-6 col-sm-6 estado_cidade">
@@ -138,7 +138,7 @@
           <div class="col-md-12 text-center btn-lg">
             <p style="color: #5AB5FF;" class="texto-termos">Ao clicar em "Criar Conta", você aceita nosso Termos, Política de
               Privacidade e Política de Cookies. <a href="" style="font-weight: 500; color: #4fb0ff;">Saiba mais</a></p>
-            <input type="submit" class="btn btn-primary" value="Criar conta" style="border-radius: 20px;
+            <input type="submit" name="submit" class="btn btn-primary" value="Criar conta" style="border-radius: 20px;
             width: 30vw;
             height: 5vh;
             font-size: 18px;

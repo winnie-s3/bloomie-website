@@ -1,49 +1,25 @@
 <?php
-include ("connect.php");
+include('connect.php');
 
-// Verifique se o formulário foi enviado
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Verifique se os campos do formulário foram definidos
-    if (isset($_POST['inputNome'], $_POST['inputSobrenome'], $_POST['inputEmail'], $_POST['inputUsuario'], $_POST['senha'])) {
-        // Defina as variáveis a partir dos valores do formulário
-        $nome = $_POST['inputNome']; 
-        $sobrenome = $_POST['inputSobrenome'];
-        $email = $_POST['inputEmail']; 
-        $usuario = $_POST['inputUsuario']; 
-        $senha = $_POST['senha']; 
+    if(isset($_POST['submit']))
+    {
 
-    // Gere um hash seguro para a senha
-    $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+        $nome = $_POST['nome']; 
+        $sobrenome = $_POST['sobrenome'];
+        $email = $_POST['email']; 
+        $usuario = $_POST['usuario']; 
+        $senha = $_POST['senha'];
+        $estado = $_POST['estado'];
+        $cidade = $_POST['cidade'];
+        $dia = $_POST['dia'];
+        $mes = $_POST['mes'];
+        $ano = $_POST['ano'];
+        $data_nasc = "$ano-$mes-$dia";
 
-    // Preparar a consulta SQL usando um prepared statement
-    $sql = "INSERT INTO usuario (nome, sobrenome, email, usuario, senha) VALUES (?, ?, ?, ?, ?)";
+        $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,sobrenome,senha,email,usuario,data_nasc,cidade,estado) 
+        VALUES ('$nome','$sobrenome','$senha','$email','$usuario','$data_nasc','$cidade','$estado')");
 
-    if ($stmt = $connect->prepare($sql)) {
-        // Vincule as variáveis aos parâmetros da consulta
-        $stmt->bind_param("sssss", $nome, $sobrenome, $email, $usuario, $senhaHash);
-
-        // Execute a consulta
-        if ($stmt->execute()) {
-            // Cadastro realizado com sucesso
-            echo "Cadastro realizado com sucesso!";
-        } else {
-            // Erro ao executar a consulta SQL
-            echo "Erro ao cadastrar o usuário. " . $stmt->error;
-        }
-
-        // Feche a declaração
-        $stmt->close();
-    } else {
-        // Erro ao preparar a declaração SQL
-        echo "Erro ao preparar a declaração SQL: " . $connect->error;
+        // header('Location: /src/PHP/cadastro.php');
     }
 
-    // Feche a conexão com o banco de dados
-    $connect->close();
-    }}
-
-    include("../pages/cadastro.html")
-
 ?>
-
-
