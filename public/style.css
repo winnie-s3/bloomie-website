@@ -1679,7 +1679,7 @@ input[type="file"] {
     }
     
     .cadEmpresa-container .form-cadastro .txt2 {
-        white-space: nowrap;
+        white-space: inherit;
         margin-top: -0.5vw;
         color: #1185E3;
     }
@@ -2102,6 +2102,10 @@ input[type="file"] {
         color: #0B528C;
         margin-left: 0;
     }
+
+    .cadEmpresa-container {
+        height: 100vh;
+    }
     
     .cadastro-container .form-cadastro {
         height: 100vw;
@@ -2113,7 +2117,7 @@ input[type="file"] {
     }
     
     .cadEmpresa-container .form-cadastro .txt2 {
-        white-space: nowrap;
+        white-space: inherit;
         margin-top: -0.5vw;
         color: #1185E3;
     }
@@ -2161,6 +2165,8 @@ input[type="file"] {
         margin-top: 1vw;
         background-color: #1185E3;
         border: #1185E3;
+        color: #fff;
+        text-decoration: none;
     }
     
     .cadastro-container .form-cadastro select {
