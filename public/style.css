@@ -328,6 +328,14 @@ section {
     bottom: 0;
 }
 
+.container-menu {
+    display: none;
+}
+
+.logo-responsive {
+    display: none;
+}
+
 /* -------- SOBRE -------- */
 
 .sobre-container,
@@ -783,22 +791,23 @@ section {
     border-radius: 5vw;
     border: solid 0.1vw #1185E3;
     color: #1185E3;
-    height: 3.5vw;
+    height: 3vw;
 }
 
 .cadastro-container .form-cadastro select {
     border-radius: 5vw;
     border: solid 0.1vw #1185E3;
     color: #5AB5FF;
-    height: 3.5vw;
+    height: 3vw;
     margin-top: -1.5vw;
+    padding-left: 1vw;
 }
 
 .cadEmpresa-container .form-cadastro select {
     border-radius: 5vw;
     border: solid 0.1vw #1185E3;
     color: #5AB5FF;
-    height: 3.5vw;
+    height: 3vw;
     margin-top: 0;
 }
 
@@ -1185,6 +1194,10 @@ input[type="file"] {
     /* Torna a sobreposição visível quando o mouse está sobre a imagem */
 }
 
+.estado_cidade select{
+    width: 100%;
+}
+
 /* ---------------- RESPONSIVIDADE ------------------ */
 
 /* ----- INDEX ----- */
@@ -1203,6 +1216,7 @@ input[type="file"] {
 
     .logo-responsive {
         width: 100px;
+        display: block;
     }
 
     .home-textos {
@@ -1505,100 +1519,39 @@ input[type="file"] {
         color: #0B528C;
         margin-left: 0;
         width: 100vw;
+        
     }
     
     .login-card {
-        background-color: #1285E1;
-        height: 35vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;
-        padding: 2.5vw;
-        width: 32vw;
-        color: #fff;
-        border-radius: 1vw;
-    }
-    
-    .login-card h1 {
-        font-size: 2vw;
-        width: 20vw;
-        font-weight: 700;
-    }
-    
-    .login-card h2 {
-        font-size: 1.5vw;
-        font-weight: 400;
-        margin-top: 1vw;
-    }
-    
-    .login-card-comentario {
-        background-color: #0B528C;
-        display: flex;
-        flex-direction: column;
-        margin-top: 2vw;
-        padding: 1.5vw 2vw;
-        border-radius: 2.5vw;
-        font-size: 1.3vw;
-        gap: 1vw;
-    }
-    
-    .login-card-comentario p {
-        margin: 0;
-    }
-    
-    .comentario-autor {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 0.5vw;
-    }
-    
-    .comentario-autor img {
-        width: 3vw;
-        height: 3vw;
-    }
-    
-    .login-dots {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        justify-content: center;
-        margin-top: 1.5vw;
-        gap: 0.8vw;
-    }
-    
-    .login-dot {
-        width: 1.6vw;
-        height: 1.6vw;
-        border-radius: 100%;
+        display: none;
     }
     
     .login-form {
-        height: 35vw;
+        height: 100vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
         padding: 2.5vw;
-        width: 32vw;
+        width: 80vw;
     }
     
     .login-form h2 {
         font-weight: 700;
+        font-size: 35px;
     }
     
     .login-form h3 {
         font-weight: 400;
-        font-size: 1.5vw;
-        margin-bottom: 3vw;
+        font-size: 20px;
+        margin-bottom: 25px;
     }
     
     .login-form form {
         display: flex;
         flex-direction: column;
-        gap: 2vw;
+        gap: 20px;
     }
     
     .login-form form a {
@@ -1611,8 +1564,8 @@ input[type="file"] {
     .login-form form .form-control {
         border-radius: 5vw;
         border: solid 0.1vw #1185E3;
-        width: 22vw;
-        height: 3.5vw;
+        width: 250px;
+        height: 35px;
     }
     
     .login-form form span .form-control {
@@ -1631,25 +1584,28 @@ input[type="file"] {
     }
     
     .login-form form span i {
-        margin-left: -3vw;
-        font-size: 1.6vw;
+        margin-left: -35px;
+        font-size: 20px;
         cursor: pointer;
     }
     
     .login-form form button {
-        border-radius: 1vw;
-        width: 22vw;
-        height: 3.5vw;
+        border-radius: 110px;
+        width: 250px;
+        height: 35px;
         font-weight: 500;
-        font-size: 1.5vw;
+        font-size: 18px;
         background-color: #1185E3;
         border: #1185E3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .login-form p {
         margin-top: 1vw;
         font-weight: 400;
-        font-size: 1.3vw;
+        font-size: 15px;
     }
 
     /* --- PARCERIAS --- */
@@ -1700,6 +1656,80 @@ input[type="file"] {
         height: 5vw;
         width: 30vw;
     }
+
+    /* --- CADASTRO --- */
+    .cadastro-container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: left;
+        color: #0B528C;
+        margin-left: 0;
+    }
+    
+    .cadastro-container .form-cadastro {
+        height: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 50vw;
+    }
+    
+    .cadEmpresa-container .form-cadastro .txt2 {
+        white-space: nowrap;
+        margin-top: -0.5vw;
+        color: #1185E3;
+    }
+    
+    .cadastro-container .form-cadastro form {
+        width: 40vw;
+        margin-top: -5px;
+    }
+    
+    .cadastro-container .form-cadastro form span {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .cadastro-container .form-cadastro form span i {
+        margin-left: -3vw;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    
+    .cadastro-container .form-cadastro h2 {
+        font-size: 25px;
+    }
+    
+    .cadastro-container .form-cadastro h3 {
+        font-size: 15px;
+    }
+    
+    .cadastro-container .form-cadastro input {
+        border-radius: 5vw;
+        border: solid 0.1vw #1185E3;
+        color: #1185E3;
+        height: 30px;
+        font-size: 12px;
+    }
+    
+    .cadastro-container .form-cadastro select {
+        border-radius: 5vw;
+        border: solid 0.1vw #1185E3;
+        color: #5AB5FF;
+        height: 30px;
+        margin-top: -1.5vw;
+        padding-left: 1vw;
+        font-size: 12px;
+    }
+
+    .desc-cadastro {
+        margin-bottom: 0px;
+    }
 }
 
 @media only screen and (max-width: 425px) {
@@ -1715,6 +1745,7 @@ input[type="file"] {
 
     .logo-responsive {
         width: 100px;
+        display: block;
     }
 
     .home-textos {
@@ -1872,6 +1903,7 @@ input[type="file"] {
     .swiper-container .swiper-pagination .swiper-pagination-bullet {
         width: 3vw;
         height: 3vw;
+        display: none;
     }
     
     .swiper-container .swiper-pagination .swiper-pagination-bullet:not(:last-child) {
@@ -1879,7 +1911,7 @@ input[type="file"] {
     }
     
     .swiper-wrapper {
-        width: 85vw;
+        width: 80vw;
     }
     
     .swiper-container {
@@ -1892,7 +1924,7 @@ input[type="file"] {
         background-position: center;
         background-size: cover;
         width: 55vw;
-        height: 38vw;
+        height: 80vw;
         border-radius: 2vw;
         padding: 3vw;
         display: flex;
@@ -2057,5 +2089,95 @@ input[type="file"] {
         font-size: 20px;
         height: 30px;
         width: 45vw;
+    }
+
+    /* --- CADASTRO --- */
+    .cadastro-container {
+        height: 135vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: left;
+        color: #0B528C;
+        margin-left: 0;
+    }
+    
+    .cadastro-container .form-cadastro {
+        height: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 90vw;
+    }
+    
+    .cadEmpresa-container .form-cadastro .txt2 {
+        white-space: nowrap;
+        margin-top: -0.5vw;
+        color: #1185E3;
+    }
+    
+    .cadastro-container .form-cadastro form {
+        width: 60vw;
+        margin-top: -5px;
+    }
+    
+    .cadastro-container .form-cadastro form span {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .cadastro-container .form-cadastro form span i {
+        margin-left: -30px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    
+    .cadastro-container .form-cadastro h2 {
+        font-size: 25px;
+    }
+    
+    .cadastro-container .form-cadastro h3 {
+        font-size: 15px;
+    }
+    
+    .cadastro-container .form-cadastro input {
+        border-radius: 5vw;
+        border: solid 0.1vw #1185E3;
+        color: #1185E3;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .cadastro-container .form-cadastro form button {
+        border-radius: 20px;
+        width: 150px;
+        height: 35px;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 1vw;
+        margin-top: 1vw;
+        background-color: #1185E3;
+        border: #1185E3;
+    }
+    
+    .cadastro-container .form-cadastro select {
+        border-radius: 5vw;
+        border: solid 0.1vw #1185E3;
+        color: #5AB5FF;
+        height: 30px;
+        margin-top: -1.5vw;
+        padding-left: 12px;
+        font-size: 12px;
+    }
+
+    .desc-cadastro {
+        margin-bottom: 0px;
+    }
+
+    .texto-termos {
+        font-size: 12px;
     }
 }

@@ -56,32 +56,32 @@ function toggleText() {
 // ALTERNAR ENTRE POSTAGENS E OPORTUNIDADES
 
 // Função para mostrar o conteúdo das oportunidades
-function mostrarOportunidades() {
-  document.getElementById("feed-oportunidades").classList.remove('conteudo');
-  document.getElementById("sidebar-oportunidades").classList.remove('conteudo');
-  document.getElementById("feed-postagens").classList.add('conteudo');
-  document.getElementById("sidebar-postagens").classList.add('conteudo');
-  console.log('oioi');
-}
+// function mostrarOportunidades() {
+//   document.getElementById("feed-oportunidades").classList.remove('conteudo');
+//   document.getElementById("sidebar-oportunidades").classList.remove('conteudo');
+//   document.getElementById("feed-postagens").classList.add('conteudo');
+//   document.getElementById("sidebar-postagens").classList.add('conteudo');
+//   console.log('oioi');
+// }
 
 // Função para mostrar o conteúdo das postagens
-function mostrarPostagens() {
-  document.getElementById("feed-oportunidades").classList.add('conteudo');
-  document.getElementById("sidebar-oportunidades").classList.add('conteudo');
-  document.getElementById("feed-postagens").classList.remove('conteudo');
-  document.getElementById("sidebar-postagens").classList.remove('conteudo');
-  console.log('oioipostagens');
-}
+// function mostrarPostagens() {
+//   document.getElementById("feed-oportunidades").classList.add('conteudo');
+//   document.getElementById("sidebar-oportunidades").classList.add('conteudo');
+//   document.getElementById("feed-postagens").classList.remove('conteudo');
+//   document.getElementById("sidebar-postagens").classList.remove('conteudo');
+//   console.log('oioipostagens');
+// }
 
 // Adicione ouvintes de eventos aos botões
-document.getElementById("btnOportunidades").addEventListener("click", mostrarOportunidades);
-document.getElementById("btnPostagens").addEventListener("click", mostrarPostagens);
+// document.getElementById("btnOportunidades").addEventListener("click", mostrarOportunidades);
+// document.getElementById("btnPostagens").addEventListener("click", mostrarPostagens);
 
 // Mostrar as oportunidades por padrão ao carregar a página
-mostrarPostagens();
+// mostrarPostagens();
 
 // --------------- CIDADES E ESTADOS ------------------
-const ulrUF = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados';
+const ulrUF = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados'
 const cidade = document.getElementById("cidade");
 const uf = document.getElementById("uf");
 
@@ -101,10 +101,15 @@ window.addEventListener('load', async ()=> {
   const request = await fetch(ulrUF)
   const response = await request.json()
 
+  console.log(response)
   const options = document.createElement("optgroup")
   options.setAttribute('label', 'UFS')
   response.forEach(function(uf) {
     options.innerHTML += '<option>' + uf.sigla + '</option>'
+
+  response.forEach(function(uf) {
+    console.log(uf.sigla)
+  });
 })
 
 uf.append(options);

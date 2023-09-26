@@ -31,7 +31,7 @@
         <h3 class="text-center" style="font-weight: 400;">Acesse oportunidades incríveis!<br><span
             style="font-weight: 500;">Crie sua conta</span> e <span style="font-weight: 500;">junte-se à
             Bloomie.</span></h3>
-        <form class="row g-3" method="post">
+        <form class="row g-3" method="post" class="form-cadastro-usuario">
           <div class="col-md-6">
             <input type="text" class="form-control" id="inputNome" placeholder="Nome">
           </div>
@@ -52,31 +52,31 @@
             </span>
           </div>
 
-          <p>Data de nascimento</p>
-          <div class="col-md-4">
+          <p style="margin-bottom: 5px;">Data de nascimento</p>
+          <div class="col-md-4 col-sm-4">
             <select class="form-select align-text-bottom" id="dobday"></select>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 col-sm-4">
             <select class="form-select align-text-bottom" id="dobmonth"></select>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 col-sm-4">
             <select class="form-select align-text-bottom" id="dobyear"></select>
           </div>
 
-          <p>Estado e Cidade</p>
-          <div class="col-md-6">
+          <p style="margin-bottom: -5px;">Estado e Cidade</p>
+          <div class="col-md-6 col-sm-6 estado_cidade">
             <select id="uf">
-              <option></option>
+              <option>Estado</option>
             </select>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 col-sm-6 estado_cidade">
             <select id="cidade">
-              <option></option>
+              <option>Cidade</option>
             </select>
           </div>
 
           <div class="col-md-12 text-center btn-lg">
-            <p style="color: #5AB5FF;">Ao clicar em "Criar Conta", você aceita nosso Termos, Política de
+            <p style="color: #5AB5FF;" class="texto-termos">Ao clicar em "Criar Conta", você aceita nosso Termos, Política de
               Privacidade e Política de Cookies. <a href="" style="font-weight: 500; color: #4fb0ff;">Saiba mais</a></p>
             <button type="submit" class="btn btn-primary">Criar conta</button>
             <p>Já tem conta? <a href="/public/index.html#login" style="font-weight: 500; color: #5AB5FF;">Faça login</a>
