@@ -91,15 +91,15 @@
         <h3 class="text-center" style="font-weight: 400;">Preencha e receba um comunicado no
           lançamento de Bloomie PEMEB</h3>
         <h3 class="text-center txt2" style="font-weight: 500;">(Pessoas e Empresas Mudando a Educação Brasileira).</h3>
-        <form class="row g-4" method="POST">
+        <form class="row g-4" method="post" action="/src/PHP/cadastroEmpresa.php">
           <div class="col-md-12">
-            <input type="text" class="form-control input-pemeb" id="inputNome" placeholder="Nome da empresa">
+            <input type="text" name="nomeEmpresa" class="form-control input-pemeb" id="inputNome" placeholder="Nome da empresa">
           </div>
           <div class="col-md-12">
             <select class="form-select align-text-bottom select2 input-pemeb">
               <option value="">Setor</option>
-              <option value="">Agricultura e Meio Ambiente</option>
-              <option value="">Alimentação e Bebidas</option>
+              <option value="" name="setor">Agricultura e Meio Ambiente</option>
+              <option value="" name="setor">Alimentação e Bebidas</option>
               <option value="">Arte e Cultura</option>
               <option value="">Construção e engenharia</option>
               <option value="">Projetos</option>
@@ -125,7 +125,7 @@
             </select>
           </div>
           <div class="col-md-12">
-            <input type="email" class="form-control input-pemeb" id="inputEmail" placeholder="Email para contato">
+            <input type="email" name="email" class="form-control input-pemeb" id="inputEmail" placeholder="Email para contato">
           </div>
 
           <div class="col-md-12 text-center btn-lg">
