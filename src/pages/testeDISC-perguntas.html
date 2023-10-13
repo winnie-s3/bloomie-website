@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.css'>
+
+  <link rel="stylesheet" href="/public/disc.css">
+  <link rel="stylesheet" href="/public/style.css">
+  <link rel="shortcut icon" href="/src/assets/bluBloomie.png" />
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://kit.fontawesome.com/fec6e5d711.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    .column {
+      margin-bottom: 1.5rem;
+      width: 100%;
+      float: left;
+      box-sizing: border-box;
+    }
+
+    .container:after,
+    .row:after,
+    .clearfix {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Barclaycard Co Lt', sans-serif;
+      color: #018fd0;
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 54px;
+    }
+
+    h2 {
+      font-size: 36px;
+    }
+
+    h3 {
+      color: #5224a0;
+      font-size: 26px;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .questions_box {
+      background-color: #ffffff;
+      padding: 60px;
+      text-align: left;
+      max-width: 960px;
+    }
+
+    .button {
+      font-family: 'Barclaycard Co Lt', Tahoma, sans-serif;
+      margin: 10px 0 0 0;
+      float: right;
+      cursor: pointer;
+      font-size: 1em;
+      border: none;
+      padding: 10px 15px;
+      line-height: 18px;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      vertical-align: baseline;
+      background: #075da8;
+      color: white;
+      text-decoration: none !important;
+      display: inline-block;
+      -webkit-font-smoothing: subpixel-antialiased;
+      -webkit-transition: background-color 200ms ease-in-out;
+      -moz-transition: background-color 200ms ease-in-out;
+      -o-transition: background-color 200ms ease-in-out;
+      transition: background-color 200ms ease-in-out;
+    }
+
+    .button:hover {
+      background-color: #059fdb !important;
+      color: white;
+    }
+
+    #question-2,
+    #question-3,
+    #question-4,
+    #question-5,
+    #question-6,
+    #question-7,
+    #question-8,
+    #question-9,
+    #question-10,
+    #question-11 {
+      display: none;
+    }
+
+    #progress_bar {
+      background-color: #018fd0;
+      width: 20%;
+      height: 10px;
+      transition: all 100ms ease-in-out;
+    }
+  </style>
+
+</head>
+
+<body id="homepage">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-white">
+    <a class="navbar-brand" href="#"><img src="/src/assets/logoBloomie-blu.png" alt="" width="150px"></a>
+  </nav>
+
+  <main>
+    <div class="row justify-content-start align-items-start g-0">
+      <div class="col-2 bg-primary sidebar-container">
+        <div class="container text-center sidebar">
+          <div class="row row-cols-1 justify-content-around align-items-center g-5">
+            <div class="col">
+              <span class="searchbar rounded-4">
+                <i class="ph ph-magnifying-glass"></i>
+                <input type="text" name="" id="" placeholder="Buscar...">
+              </span>
+            </div>
+            <div class="col">
+              <div class="row row-cols-1 justify-content-start align-items-center g-3 text-start">
+                <div class="col text-white sidebar-op">
+                  <i class="ph ph-house"></i>
+                  <a href="" class="text-decoration-none text-white">Home</a>
+                </div>
+                <div class="col text-white sidebar-op">
+                  <i class="ph ph-user"></i>
+                  <a href="" class="text-decoration-none text-white">Perfil</a>
+                </div>
+                <div class="col text-white sidebar-op">
+                  <i class="ph ph-bell-ringing"></i>
+                  <a href="" class="text-decoration-none text-white">Notificações</a>
+                </div>
+                <div class="col text-white sidebar-op">
+                  <i class="ph ph-plant"></i>
+                  <a href="" class="text-decoration-none text-white">Enviar<br>oportunidades</a>
+                </div>
+                <div class="col text-white sidebar-op">
+                  <i class="ph ph-gear"></i>
+                  <a href="" class="text-decoration-none text-white">Configurações</a>
+                </div>
+                <div class="col text-white sidebar-op">
+                  <i class="ph ph-question"></i>
+                  <a href="" class="text-decoration-none text-white">Ajuda & suporte</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <a href="" class="text-decoration-none text-white">Sair</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-10 justify-content-center">
+        <div class="disc-perguntas-container"
+          style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+          <div class="container">
+            <div class="row">
+              <div class="two-thirds column">
+
+                <div id="progress_bar"></div>
+                <form class="questions_box">
+
+                  <div id="question-1">
+                    <h3>1. Em situações de conflito, eu:</h3>
+                    <input id="question-1-answer-a" type="radio" name="favelang" value="A" data-question="1"> Defendo
+                    minha
+                    opinião e resolvo o problema logo.<br>
+                    <input id="question-1-answer-b" type="radio" name="favelang" value="B" data-question="1"> Busco um
+                    acordo
+                    que satisfaça todos.<br>
+                    <input id="question-1-answer-c" type="radio" name="favelang" value="C" data-question="1"> Evito o
+                    conflito e
+                    busco criar um ambiente de paz.<br>
+                    <input id="question-1-answer-d" type="radio" name="favelang" value="D" data-question="1"> Penso
+                    bastante
+                    antes de tomar uma decisão.<br>
+                    <div id="submit1" class="button">Próximo</div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div id="question-2">
+                    <h3>2. Ao lidar com mudanças, sou mais inclinado a:</h3>
+                    <input id="question-2-answer-a" type="radio" name="favelang" value="A" data-question="2"> Abraçar a
+                    mudança
+                    rapidamente e me adaptar conforme necessário.<br>
+                    <input id="question-2-answer-b" type="radio" name="favelang" value="B" data-question="2">
+                    Influenciar e
+                    motivar os outros a aceitarem e se adaptarem às mudanças.<br>
+                    <input id="question-2-answer-c" type="radio" name="favelang" value="C" data-question="2"> Levar em
+                    consideração as preocupações das pessoas afetadas e trabalhar para minimizar os impactos
+                    negativos.<br>
+                    <input id="question-2-answer-d" type="radio" name="favelang" value="D" data-question="2"> Seguir os
+                    procedimentos estabelecidos e garantir que as mudanças sejam implementadas corretamente.<br>
+                    <div id="submit2" class="button">Enviar Resposta</div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div id="question-3">
+                    <h3>3. Em um ambiente de trabalho, sou mais propenso a:</h3>
+                    <input id="question-3-answer-a" type="radio" name="favelang" value="A" data-question="3"> Assumir a
+                    liderança e delegar tarefas para alcançar os objetivos rapidamente.<br>
+                    <input id="question-3-answer-b" type="radio" name="favelang" value="B" data-question="3"> Contribuir
+                    com
+                    ideias e motivar a equipe a alcançar os objetivos em conjunto.<br>
+                    <input id="question-3-answer-c" type="radio" name="favelang" value="C" data-question="3"> Construir
+                    relacionamentos fortes e garantir que todos tenham a oportunidade de se expressar.<br>
+                    <input id="question-3-answer-d" type="radio" name="favelang" value="D" data-question="3"> Contribuir
+                    com
+                    conhecimento especializado e garantir que o trabalho seja realizado com precisão.<br>
+                    <div id="submit3" class="button">Enviar Resposta</div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div id="question-4">
+                    <h3>4. Ao enfrentar um problema complexo, sou mais propenso a:</h3>
+                    <input id="question-4-answer-a" type="radio" name="favelang" value="A" data-question="4"> Encontrar
+                    uma
+                    solução rápida, mesmo que não seja perfeita.<br>
+                    <input id="question-4-answer-b" type="radio" name="favelang" value="B" data-question="4"> Discutir o
+                    problema com outras pessoas e buscar diferentes perspectivas.<br>
+                    <input id="question-4-answer-c" type="radio" name="favelang" value="C" data-question="4"> Considerar
+                    as
+                    preocupações e sentimentos das pessoas envolvidas antes de tomar uma decisão.<br>
+                    <input id="question-4-answer-d" type="radio" name="favelang" value="D" data-question="4"> Analisar
+                    cuidadosamente as informações disponíveis e considerar todas as opções antes de decidir.<br>
+                    <div id="submit4" class="button">Enviar Resposta</div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div id="question-5">
+                    <h3>5. No trabalho em equipe, sou mais propenso a:</h3>
+                    <input id="question-5-answer-a" type="radio" name="favelang" value="A" data-question="5"> Assumir a
+                    liderança e delegar tarefas para alcançar os objetivos rapidamente.<br>
+                    <input id="question-5-answer-b" type="radio" name="favelang" value="B" data-question="5"> Contribuir
+                    com
+                    ideias e motivar a equipe a alcançar os objetivos em conjunto.<br>
+                    <input id="question-5-answer-c" type="radio" name="favelang" value="C" data-question="5"> Construir
+                    relacionamentos fortes e garantir que todos tenham a oportunidade de se expressar.<br>
+                    <input id="question-5-answer-d" type="radio" name="favelang" value="D" data-question="5"> Contribuir
+                    com
+                    conhecimento especializado e garantir que o trabalho seja realizado com precisão.<br>
+                    <div id="submit5" class="button">Enviar Resposta</div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div id="question-6">
+                    <h3>6. Em termos de seguir regras e procedimentos, sou mais propenso a:</h3>
+                    <input id="question-6-answer-a" type="radio" name="favelang" value="A" data-question="6"> Agir de
+                    forma
+                    independente e assumir riscos para alcançar resultados.<br>
+                    <input id="question-6-answer-b" type="radio" name="favelang" value="B" data-question="6"> Trabalhar
+                    dentro
+                    dos limites das regras, mas buscando flexibilidade quando necessário.<br>
+                    <input id="question-6-answer-c" type="radio" name="favelang" value="C" data-question="6"> Seguir as
+                    regras e
+                    procedimentos estabelecidos, mantendo a estabilidade e a consistência.<br>
+                    <input id="question-6-answer-d" type="radio" name="favelang" value="D" data-question="6"> Seguir
+                    rigorosamente as regras e procedimentos, garantindo a conformidade e a precisão.<br>
+                    <div id="submit6" class="button">Enviar Resposta</div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div id="question-7">
+                    <h3>7. Ao comunicar minhas ideias, sou mais propenso a:</h3>
+                    <input id="question-7-answer-a" type="radio" name="favelang" value="A" data-question="7"> Ser direto
+                    e
+                    assertivo, enfatizando os resultados e ação.<br>
+                    <input id="question-7-answer-b" type="radio" name="favelang" value="B" data-question="7"> Ser
+                    persuasivo e
+                    envolvente, utilizando histórias e exemplos para transmitir minha mensagem.<br>
+                    <input id="question-7-answer-c" type="radio" name="favelang" value="C" data-question="7"> Ser
+                    diplomático e
+                    amigável, focando nas emoções e no impacto nas pessoas.<br>
+                    <input id="question-7-answer-d" type="radio" name="favelang" value="D" data-question="7"> Ser
+                    detalhado e
+                    preciso, fornecendo informações técnicas e embasadas.<br>
+                    <div id="submit7" class="button">Enviar Resposta</div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div id="question-8">
+                    <h3>8. Em situações de estresse, sou mais propenso a:</h3>
+                    <input id="question-8-answer-a" type="radio" name="favelang" value="A" data-question="8"> Agir
+                    rapidamente
+                    para resolver o problema e minimizar o estresse.<br>
+                    <input id="question-8-answer-b" type="radio" name="favelang" value="B" data-question="8"> Buscar
+                    apoio
+                    emocional e compartilhar o estresse com os outros.<br>
+                    <input id="question-8-answer-c" type="radio" name="favelang" value="C" data-question="8"> Evitar
+                    conflitos e
+                    buscar um ambiente tranquilo para aliviar o estresse.<br>
+                    <input id="question-8-answer-d" type="radio" name="favelang" value="D" data-question="8"> Analisar a
+                    situação cuidadosamente e tomar decisões informadas para reduzir o estresse.<br>
+                    <div id="submit8" class="button">Enviar Resposta</div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div id="question-9">
+                    <h3>9. Ao abordar tarefas ou projetos, sou mais propenso a:</h3>
+                    <input id="question-9-answer-a" type="radio" name="favelang" value="A" data-question="9"> Iniciar a
+                    ação
+                    imediatamente, mesmo que os detalhes não estejam totalmente claros.<br>
+                    <input id="question-9-answer-b" type="radio" name="favelang" value="B" data-question="9"> Iniciar a
+                    ação,
+                    mas também buscar a colaboração e o envolvimento dos outros.<br>
+                    <input id="question-9-answer-c" type="radio" name="favelang" value="C" data-question="9"> Considerar
+                    as
+                    necessidades e preferências dos outros antes de iniciar a ação.<br>
+                    <input id="question-9-answer-d" type="radio" name="favelang" value="D" data-question="9"> Analisar e
+                    planejar cuidadosamente antes de iniciar a ação.<br>
+                    <div id="submit9" class="button">Enviar Resposta</div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div id="question-10">
+                    <h3>10. No geral, sou mais propenso a:</h3>
+                    <input id="question-10-answer-a" type="radio" name="favelang" value="A" data-question="10"> Ser
+                    assertivo e
+                    focado em resultados.<br>
+                    <input id="question-10-answer-b" type="radio" name="favelang" value="B" data-question="10"> Ser
+                    expressivo e
+                    envolvente.<br>
+                    <input id="question-10-answer-c" type="radio" name="favelang" value="C" data-question="10"> Ser
+                    amigável e
+                    focado em relacionamentos.<br>
+                    <input id="question-10-answer-d" type="radio" name="favelang" value="D" data-question="10"> Ser
+                    detalhista e
+                    focado em precisão.<br>
+                    <div id="submit10" class="button">Enviar Resposta</div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div id="question-11">
+                    <!-- <h2>Obrigado por responder a pesquisa!</h2>
+                   <h3>Sua personalidade é: </h3>
+                   <h1 id=printtotalscore></h1>-->
+                   <p id=printscoreinfo></p> 
+                    <!-- <div id="dominante">
+                      <h2>Personalidade dominante</h2>
+                      <img src="/image 1.png" alt="" width="100px">
+                    </div>
+                    <div id="influente">
+                      <h2>Personalidade influente</h2>
+                      <img src="/image 1.png" alt="" width="100px">
+                    </div>
+                    <div id="estavel">
+                      <h2>Personalidade estavel</h2>
+                      <img src="/image 1.png" alt="" width="100px">
+                    </div>
+                    <div id="conformidade">
+                      <h2>Personalidade conformidade</h2>
+                      <img src="/image 1.png" alt="" width="100px"> -->
+                  </div>
+              </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+
+  <script>
+    var answers = {};
+
+    var question_one = document.getElementById('question-1');
+    var question_two = document.getElementById('question-2');
+    var question_three = document.getElementById('question-3');
+    var question_four = document.getElementById('question-4');
+    var question_five = document.getElementById('question-5');
+    var question_six = document.getElementById('question-6');
+    var question_seven = document.getElementById('question-7');
+    var question_eight = document.getElementById('question-8');
+    var question_nine = document.getElementById('question-9');
+    var question_ten = document.getElementById('question-10');
+
+    function storeAnswer(question_number, event) {
+      if (event.target.type === 'radio') {
+        console.log(event.target.value);
+        answers['question' + question_number] = event.target.value;
+        console.log(answers);
+      }
+    }
+
+    // question_one.addEventListener('click', function(event){
+    //     storeAnswer(1, event)
+    // })
+    // question_two.addEventListener('click', function(event){
+    //     storeAnswer(2, event)
+    // })
+    // question_three.addEventListener('click', function(event){
+    //     storeAnswer(3, event)
+    // })
+    // question_four.addEventListener('click', function(event){
+    //     storeAnswer(4, event)
+    // })
+    // question_five.addEventListener('click', function(event){
+    //     storeAnswer(5, event)
+    // })
+    // question_six.addEventListener('click', function(event){
+    //     storeAnswer(6, event)
+    // })
+    // question_seven.addEventListener('click', function(event){
+    //     storeAnswer(7, event)
+    // })
+    // question_eight.addEventListener('click', function(event){
+    //     storeAnswer(8, event)
+    // })
+    // question_nine.addEventListener('click', function(event){
+    //     storeAnswer(9, event)
+    // })
+    // question_ten.addEventListener('click', function(event){
+    //     storeAnswer(10, event)
+    // })
+
+    // Adicione este bloco para lidar com todas as perguntas
+    for (var i = 1; i <= 10; i++) {
+      var question = document.getElementById('question-' + i);
+      question.addEventListener('click', function (event) {
+        if (event.target.type === 'radio') {
+          var questionNumber = event.target.getAttribute('data-question');
+          storeAnswer(questionNumber, event);
+        }
+      });
+    }
+
+    function totalScore() {
+      var counts = { A: 0, B: 0, C: 0, D: 0 };
+
+      for (var questionNumber = 1; questionNumber <= 10; questionNumber++) {
+        var answer = answers['question' + questionNumber];
+        counts[answer]++;
+      }
+
+      return counts;
+    }
+
+    function getInfoBasedOnScore() {
+      var counts = totalScore();
+
+      if (counts.A > counts.B && counts.A > counts.C && counts.A > counts.D) {
+        return "Personalidade Dominante (D)";
+      } else if (counts.B > counts.A && counts.B > counts.C && counts.B > counts.D) {
+        return "Personalidade Influente (I)";
+      } else if (counts.C > counts.A && counts.C > counts.B && counts.C > counts.D) {
+        return "Personalidade Estável (S)";
+      } else {
+        return "Personalidade Conformada (C)";
+      }
+    }
+
+    var submit1 = document.getElementById('submit1');
+    var submit2 = document.getElementById('submit2');
+    var submit3 = document.getElementById('submit3');
+    var submit4 = document.getElementById('submit4');
+    var submit5 = document.getElementById('submit5');
+    var submit6 = document.getElementById('submit6');
+    var submit7 = document.getElementById('submit7');
+    var submit8 = document.getElementById('submit8');
+    var submit9 = document.getElementById('submit9');
+    var submit10 = document.getElementById('submit10');
+
+    function nextQuestion(question_number) {
+      var current_question_number = question_number - 1;
+      var question_number = question_number.toString();
+      var current_question_number = current_question_number.toString();
+
+      var el = document.getElementById('question-' + question_number);
+      var el2 = document.getElementById('question-' + current_question_number);
+
+      el.style.display = "block";
+      el2.style.display = "none";
+    }
+
+    submit1.addEventListener('click', function () {
+      nextQuestion(2);
+      growProgressBar('10%');
+    })
+    submit2.addEventListener('click', function () {
+      nextQuestion(3);
+      growProgressBar('20%');
+    })
+    submit3.addEventListener('click', function () {
+      nextQuestion(4);
+      growProgressBar('30%');
+    })
+    submit4.addEventListener('click', function () {
+      nextQuestion(5);
+      growProgressBar('40%');
+    })
+    submit5.addEventListener('click', function () {
+      nextQuestion(6);
+      growProgressBar('50%');
+    })
+    submit6.addEventListener('click', function () {
+      nextQuestion(7);
+      growProgressBar('60%');
+    })
+    submit7.addEventListener('click', function () {
+      nextQuestion(8);
+      growProgressBar('70%');
+    })
+    submit8.addEventListener('click', function () {
+      nextQuestion(9);
+      growProgressBar('80%');
+    })
+    submit9.addEventListener('click', function () {
+      nextQuestion(10);
+      growProgressBar('90%');
+    })
+    submit10.addEventListener('click', function () {
+      nextQuestion(11);
+      growProgressBar('100%');
+    })
+
+    submit10.addEventListener('click', function () {
+      document.getElementById("printscoreinfo").innerHTML = getInfoBasedOnScore();
+    })
+
+    function growProgressBar(percentage_width) {
+      var bar = document.getElementById("progress_bar");
+      bar.style.width = percentage_width;
+    }
+  </script>
+
+  <script src="/public/script.js"></script>
+
+</body>
+
+</html>
