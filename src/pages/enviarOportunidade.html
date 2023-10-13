@@ -132,7 +132,7 @@
               <form class="row g-3" method="post" action="/src/PHP/cadastro.php" class="form-cadastro-usuario">
                 <div class="col-md-12">
                   <P>Título da oportunidade</P>
-                  <input type="text" class="form-control" name="nome" id="nome">
+                  <input type="text" class="form-control" name="titulo" id="titulo">
                 </div>
 
                 <div class="col-md-12">
@@ -166,7 +166,7 @@
 
                 <div class="col-md-12">
                   <p>Faixa etária</p>
-                  <select class="col-md-12" id="faixa_etaria">
+                  <select class="col-md-12" id="faixa_etaria" name="faixa_etaria">
                     <option>13 a 15 anos</option>
                     <option>15 a 18 anos</option>
                     <option>18+ anos</option>
@@ -175,19 +175,19 @@
 
                 <div class="col-md-12">
                   <p>Escolaridade</p>
-                  <select class="col-md-12" id="escolaridade">
+                  <select class="col-md-12" id="escolaridade" name="escolaridade">
                     <option></option>
                   </select>
                 </div>
 
                 <div class="col-md-12">
                   <p>Link de acesso à oportunidade</p>
-                  <input type="text" class="form-control" name="usuario" id="usuario">
+                  <input type="text" class="form-control" name="link" id="link">
                 </div>
 
                 <div class="col-md-12">
                   <p>Tipo de personalidade</p>
-                  <select class="col-md-12" id="escolaridade">
+                  <select class="col-md-12" id="tipo_personalidade" name="tipo_personalidade">
                     <option>Dominante</option>
                     <option>Influente</option>
                     <option>Estável</option>
@@ -217,7 +217,7 @@
                 <div class="col-md-12">
                   <p>Tags</p>
                   <div class="container-tag col-md-12">
-                    <input type="text" class="input-tag col-md-12" placeholder="Insira um ; após cada tag" />
+                    <input type="text" class="input-tag col-md-12" placeholder="Insira um ; após cada tag"/>
                   </div>
                 </div>
 
