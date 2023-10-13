@@ -21,7 +21,7 @@
      VALUES ('$titulo','$categoria','$estado','$cidade','$inicio','$tempo_expirar','$descricao','$idade_min','$idade_max','$escolaridade','$link','$tipo_personalidade','$tags','$imagem')");
 
      
-      echo"Dados Cadastrados testando";
+      echo"Dados Cadastrados";
     
      }
 ?>
