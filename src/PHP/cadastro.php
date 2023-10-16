@@ -5,11 +5,11 @@ include('connect.php');
 if(isset($_POST['submit']))
 {
     // Verifique se todos os campos obrigatórios estão preenchidos
-    if(empty($_POST['nome']) || empty($_POST['sobrenome']) || empty($_POST['email']) || empty($_POST['usuario']) || empty($_POST['senha']) || empty($_POST['dia']) || empty($_POST['mes']) || empty($_POST['ano']))
-    {
-        echo "Todos os campos são obrigatórios!";
-        exit;
-    }
+    // if(empty($_POST['nome']) || empty($_POST['sobrenome']) || empty($_POST['email']) || empty($_POST['usuario']) || empty($_POST['senha']) || empty($_POST['dia']) || empty($_POST['mes']) || empty($_POST['ano']))
+    // {
+    //     echo "Todos os campos são obrigatórios!";
+    //     exit;
+    // }
 
     // Obtenha os valores dos campos
     $nome = $_POST['nome'];
@@ -20,11 +20,13 @@ if(isset($_POST['submit']))
     $dia = $_POST['dia'];
     $mes = $_POST['mes'];
     $ano = $_POST['ano'];
+    $estado = $_POST['estado'];
+    $cidade = $_POST['cidade'];
     $data_nasc = "$ano-$mes-$dia";
 
     // Use declarações preparadas para evitar SQL Injection
-    $stmt = $conexao->prepare("INSERT INTO usuario(nome, sobrenome, senha, email, usuario, data_nasc) VALUES (?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssssss", $nome, $sobrenome, $senha, $email, $usuario, $data_nasc);
+    $stmt = $conexao->prepare("INSERT INTO usuario(nome, sobrenome, senha, email, usuario) VALUES ('$nome', '$sobrenome', '$senha', '$email', '$usuario')");
+    
 
     if ($stmt->execute()) {
         echo "Cadastro realizado com sucesso!";
