@@ -1261,9 +1261,57 @@ input[type="file"] {
     z-index: 999;
 }
 
-/* TAG BUTTON */
+/* OPORTUNIDADES */
 
-  
+.pg-postagens {
+    display: flex;
+    flex-direction: column;
+    
+}
+.oportunidade-container-expand {
+    background-color: #5ab5ff34;
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    width: 60vw;
+
+}
+
+.oportunidade-container-expand img {
+    width: 15vw;
+    border-radius: 15px;
+    height: 25vw;
+    object-fit: cover;
+}
+
+.oportunidade-expand-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1vw;
+}
+
+.oportunidade-expand-info h2 {
+    font-size: 20px;
+    color: #1289EA;
+}
+
+.oportunidade-expand-info .oportunidade-datas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 30vw;
+}
+
+.oportunidade-expand-info .oportunidade-datas p {
+    color: #0C5D9E;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.oportunidade-datas 
 
 
 /* ---------------- RESPONSIVIDADE ------------------ */
