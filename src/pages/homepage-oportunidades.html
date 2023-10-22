@@ -23,12 +23,18 @@
     <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
       aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
     <div class="collapse navbar-collapse" id="collapsibleNavId">
-      <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+      <ul class="navbar-nav me-auto mt-2 mt-lg-0" style="display: flex; flex-direction: row; gap: 10px;">
         <li class="nav-item">
-          <button type="button" id="btnPostagens" class="btn">Postagens</button>
+          <a href="../pages/homepage-postagens.html">
+            <button type="button" id="btnPostagens" class="btn"
+            style="color: #5AB5FF; font-weight: 500;">Postagens</button>
+          </a>
         </li>
         <li class="nav-item">
-          <button type="button" id="btnOportunidades" class="btn">Oportunidades</button>
+          <a href="../pages/homepage-oportunidades.html">
+            <button type="button" id="btnOportunidades" class="btn"
+            style="background-color: #0C5D9E; color: #fff; font-weight: 500; border-radius: 15px; width: 150px;">Oportunidades</button>
+          </a>
         </li>
       </ul>
     </div>
@@ -80,86 +86,112 @@
         </div>
       </div>
 
-      <div class="col-8 d-flex justify-content-center pg-oportunidades ">
+      <div class="col-8 pg-oportunidades">
         <div id="feed-oportunidades" class="row-cols-1 justify-content-center align-items-center g-0 col-12 conteudo">
           <div class="col-12 justify-content-center align-items-center">
             <div class="row-cols-1 justify-content-center align-items-center g-2">
               <div class="col row-cols-1 justify-content-center align-items-center g-2">
-                <div class="col">
-                  <h2>Tem oportunidade quentinha por aqui, (usuário)!</h2>
-                  <p>Recomendações com base no seu perfil:</p>
-                  <select class="" name="" id="">
-                    <option selected>Filtrar por</option>
-                    <option value="">New Delhi</option>
-                    <option value="">Istanbul</option>
-                    <option value="">Jakarta</option>
-                  </select>
+                <div class="col top-oportunidades">
+                  <h2>Tem oportunidade quentinha por aqui, Ana!</h2>
+                  <span>
+                    <p style="font-size: 18px;">Recomendações com base no seu perfil:</p>
+                    <select class="" name="" id="">
+                      <option selected>Filtrar por</option>
+                      <option value="">New Delhi</option>
+                      <option value="">Istanbul</option>
+                      <option value="">Jakarta</option>
+                    </select>
+                  </span>
                 </div>
-                <div class="col-12 bg-warning">
-                  <div class="row-cols-2 justify-content-center align-items-center g-2 d-flex flex-row">
-                    <div class="col">
-                      <img src="https://source.unsplash.com/random/180x180" alt="">
+                <div class="col-12">
+                  <div class="oportunidade-container-expand" style="height: 20vw; margin-top: 30px;">
+                    <div class="oportunidade-expand-foto">
+                      <p class="tipo-oportunidade" style="margin: 5px;">Concurso</p>
+                      <img src="https://source.unsplash.com/random/" alt="" style="height: 18vw;">
                     </div>
-                    <div class="col row-cols-1 justify-content-center align-items-center g-2">
-                      <div class="col">
-                        <p>OBInvest</p>
-                        <p>Prazo: 22/06/2023</p>
-                      </div>
-                      <div class="col">
-                        <p>A Olímpiada Brasileira de Investimentos está com as inscrições abertas e você não pode... Ler
-                          mais.</p>
-                        <span>
-                          <p>Competição</p>
-                          <p>Olimpíada</p>
+                    <div class="oportunidade-expand-info">
+                      <h2 style="font-size: 20px; margin: 0;">Nome da oportunidade</h2>
+                      <span class="oportunidade-datas span-row">
+                        <p style="margin: 0;"><span style="color: #1289EA; font-size: 17px;">Prazo:</span> 00/00/0000
+                        </p>
+                      </span>
+                      <p style="margin: 0; font-size: 18px; font-weight: 400;">A Olímpiada Brasileira de Investimentos
+                        está com as inscrições abertas e você não pode... <span style="font-weight: 500;">Ler
+                          mais.</span></p>
+                      <div class="oportunidades-expand-tags">
+                        <p style="color: #1289EA; font-size: 17px; margin: 0;">Tags relacionadas:</p>
+                        <span class="span-row tags-rel">
+                          <p style="background-color: #F2C934; padding: 0 10px; border-radius: 15px;">Competição</p>
+                          <p style="background-color: #88c2f1b2; padding: 0 10px; border-radius: 15px;">Olimpíada</p>
+                          <p style="background-color: #5AB5FF; padding: 0 10px; border-radius: 15px;">STEM</p>
                         </span>
                       </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary col-12">Acessar oportunidade</button>
-                      </div>
+                      <a href="../pages/oportunidade.html" style="width: 100%;">
+                        <button style="padding: 2px 0 2px 0; margin-top: 10px;">Acessar oportunidade</button>
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="col row-cols-1 justify-content-center align-items-center g-2">
-                <div class="col">
-                  <span>
-                    <h2>Estágios</h2>
-                    <p>Crescimento profissional</p>
+              <div class="col row-cols-1 justify-content-center align-items-center g-2 op-lista"
+                style="margin-top: 30px;">
+                <div class="col op-lista-top">
+                  <span
+                    style="display: flex; flex-direction: row; justify-content: start; align-items: center; gap: 1vw;">
+                    <h2 style="margin: 0; color: #1185E3; display: flex; justify-content: center; align-items: center;">
+                      Estágios</h2>
+                    <p
+                      style="margin: 0; font-size: 15px; background-color: #1185E3; color: #fff; border-radius: 15px; padding: 0 15px; font-weight: 500;">
+                      Crescimento profissional</p>
                   </span>
                 </div>
-                <div class="col bg-warning">
-                  <div class="row-cols-2 justify-content-center align-items-center g-2 d-flex flex-row">
-                    <div class="col">
-                      <div class="row-cols-1 justify-content-center align-items-center g-2">
-                        <div class="col image-container">
-                          <img src="https://source.unsplash.com/random/180x180" alt="">
-                          <div class="overlay">Texto de Sobreposição</div>
-                        </div>
-                        <div class="col">
-                          <p>Estágio na Gloogle</p>
-                          <p>Prazo: 22/06/2023</p>
-                          <p>Faixa etária: 16 - 17 anos</p>
-                        </div>
-                        <div class="col">
-                          <button type="button" class="btn btn-primary">Saiba mais</button>
-                        </div>
+                <div class="col op-lista-bottom" style="margin-top: 20px; margin-bottom: 40px;">
+                  <div class="col">
+                    <div class="row-cols-1 justify-content-center align-items-center g-2">
+                      <div class="col image-container">
+                        <img src="https://source.unsplash.com/random/" alt="">
+                        <div class="overlay" style="color: #0C5D9E;">A Google está de portas abertas para receber um novo estagiário, por isso, o processo seletivo para essa escolha... <span style="font-weight: 500;">Ler mais.</span></div>
+                      </div>
+                      <div class="col" style="margin-top: 10px;">
+                        <p style="font-weight: 500; font-size: 18px;">Estágio na Gloogle</p>
+                        <p><span style="font-weight: 500; color: #1185E3;">Prazo:</span> 22/06/2023</p>
+                        <p><span style="font-weight: 500; color: #1185E3;">Faixa etária:</span> 16 - 17 anos</p>
+                      </div>
+                      <div class="col">
+                        <button type="button" class="btn btn-primary" style="width: 15vw; padding: 2px 0; font-weight: 500; font-size: 18px; margin-top: 10px;">Saiba mais</button>
                       </div>
                     </div>
-                    <div class="col">
-                      <div class="row-cols-1 justify-content-center align-items-center g-2">
-                        <div class="col image-container">
-                          <img src="https://source.unsplash.com/random/180x180" alt="">
-                          <div class="overlay">Texto de Sobreposição</div>
-                        </div>
-                        <div class="col">
-                          <p>Estágio na Gloogle</p>
-                          <p>Prazo: 22/06/2023</p>
-                          <p>Faixa etária: 16 - 17 anos</p>
-                        </div>
-                        <div class="col">
-                          <button type="button" class="btn btn-primary">Saiba mais</button>
-                        </div>
+                  </div>
+                  <div class="col">
+                    <div class="row-cols-1 justify-content-center align-items-center g-2">
+                      <div class="col image-container">
+                        <img src="https://source.unsplash.com/random/" alt="">
+                        <div class="overlay" style="color: #0C5D9E;">A Google está de portas abertas para receber um novo estagiário, por isso, o processo seletivo para essa escolha... <span style="font-weight: 500;">Ler mais.</span></div>
+                      </div>
+                      <div class="col" style="margin-top: 10px;">
+                        <p style="font-weight: 500; font-size: 18px;">Estágio na Gloogle</p>
+                        <p><span style="font-weight: 500; color: #1185E3;">Prazo:</span> 22/06/2023</p>
+                        <p><span style="font-weight: 500; color: #1185E3;">Faixa etária:</span> 16 - 17 anos</p>
+                      </div>
+                      <div class="col">
+                        <button type="button" class="btn btn-primary" style="width: 15vw; padding: 2px 0; font-weight: 500; font-size: 18px; margin-top: 10px;">Saiba mais</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="row-cols-1 justify-content-center align-items-center g-2">
+                      <div class="col image-container">
+                        <img src="https://source.unsplash.com/random/" alt="">
+                        <div class="overlay" style="color: #0C5D9E;">A Google está de portas abertas para receber um novo estagiário, por isso, o processo seletivo para essa escolha... <span style="font-weight: 500;">Ler mais.</span></div>
+                      </div>
+                      <div class="col" style="margin-top: 10px;">
+                        <p style="font-weight: 500; font-size: 18px;">Estágio na Gloogle</p>
+                        <p><span style="font-weight: 500; color: #1185E3;">Prazo:</span> 22/06/2023</p>
+                        <p><span style="font-weight: 500; color: #1185E3;">Faixa etária:</span> 16 - 17 anos</p>
+                      </div>
+                      <div class="col">
+                        <button type="button" class="btn btn-primary" style="width: 15vw; padding: 2px 0; font-weight: 500; font-size: 18px; margin-top: 10px;">Saiba mais</button>
                       </div>
                     </div>
                   </div>
@@ -170,7 +202,8 @@
         </div>
       </div>
       <div class="col-2 rightsidebar p-0 pg-oportunidades-leftSidebar">
-        <div id="sidebar-oportunidades" class="row-cols-1 justify-content-center align-items-center rightsidebar-group conteudo">
+        <div id="sidebar-oportunidades"
+          class="row-cols-1 justify-content-center align-items-center rightsidebar-group conteudo">
           <div class="col rounded text-center">
             <div class="container rightsidebar-container-1">
               <div class="row-cols-1 destaques justify-content-center align-items-center g-0">
