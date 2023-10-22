@@ -879,9 +879,19 @@ input[type="file"] {
 
 /* HOMEPAGE */
 
+.navbar {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    position: fixed;
+    width: 100vw;
+}
+
 .sidebar-container {
     border: solid 0.5vw #0D6EFD;
     border-radius: 0 1vw 1vw 0;
+    position: fixed;
+    margin-top: 5.5vw;
 }
 
 .sidebar {
@@ -1017,7 +1027,7 @@ input[type="file"] {
 .rightsidebar {
     color: #0C5D9E;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: 18.5vw;
@@ -1137,12 +1147,21 @@ input[type="file"] {
     display: flex;
     flex-direction: row;
     width: 100%;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+
+.post-container-item p {
+    margin: 0;
+    color: #0B528C;
 }
 
 .postagem-user img {
-    width: 3vw;
-    height: 3vw;
     border-radius: 100%;
+    width: 3.5vw;
+    height: 3.5vw;
+    object-fit: cover;
 }
 
 .options-post {
@@ -1151,22 +1170,72 @@ input[type="file"] {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    margin-top: 20px;
+    color: #1185E3;
 }
 
 .rightside-op-post {
     display: flex;
     flex-direction: row;
+    gap: 40px;
 }
 
-.rightside-op-post span {
+.rightside-op-post span,
+.leftside-op-post {
     display: flex;
     flex-direction: row;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    gap: 5px;
 }
 
-.conteudo {
-    display: none;
-    position: absolute;
+.options-post i {
+    font-size: 30px;
 }
+
+.post-container-item {
+    border: 0.2vw solid #ABD9FF;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+    background-color: #F2F9FF;
+}
+
+.post-container {
+    margin-top: 30px;
+}
+
+.doc-post {
+    margin-top: 15px;
+}
+
+.doc-post span {
+    background-color: #CFEAFF;
+    padding: 5px 20px;
+    border-radius: 15px;
+    color: #0B528C;
+    font-size: 16px;
+}
+
+.doc-post a {
+    text-decoration: none;
+    color: #0B528C;
+}
+
+.img-post {
+    margin-top: 15px;
+}
+
+.img-post img {
+    width: 100%;
+    border-radius: 15px;
+    height: 30vw;
+    object-fit: cover;
+}
+
+
 
 /* OVERLAY IMAGEM OPORTUNIDADES */
 .image-container {
@@ -1195,7 +1264,7 @@ input[type="file"] {
     /* Torna a sobreposição visível quando o mouse está sobre a imagem */
 }
 
-.estado_cidade select{
+.estado_cidade select {
     width: 100%;
 }
 
@@ -1207,6 +1276,7 @@ input[type="file"] {
     height: 100px;
     position: relative;
 }
+
 .avatar::after {
     opacity: 0;
     font-family: FontAwesome;
@@ -1222,11 +1292,12 @@ input[type="file"] {
     width: 92px;
     height: 92px;
     z-index: 2;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
     cursor: pointer;
     transition: 350ms ease-in-out;
 }
+
 .avatar:hover::after {
     opacity: 1;
 }
@@ -1244,7 +1315,7 @@ input[type="file"] {
     width: 100px;
     height: auto;
     background-color: #fff;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
     padding: 0.5rem;
     border-radius: 0.5rem;
@@ -1253,10 +1324,12 @@ input[type="file"] {
     z-index: -1;
     transition: 350ms ease-in-out;
 }
+
 .box input {
     display: none;
 }
-.box input:checked + div.menu {
+
+.box input:checked+div.menu {
     opacity: 1;
     z-index: 999;
 }
@@ -1267,7 +1340,9 @@ input[type="file"] {
     display: flex;
     flex-direction: column;
     gap: 2vw;
+    margin-left: 16vw;
 }
+
 .oportunidade-container-expand {
     background-color: #5ab5ff34;
     display: flex;
@@ -1543,26 +1618,26 @@ input[type="file"] {
         text-align: left;
         color: #0B528C;
     }
-    
+
     .swiper-container .swiper-pagination .swiper-pagination-bullet {
         width: 2vw;
         height: 2vw;
     }
-    
+
     .swiper-container .swiper-pagination .swiper-pagination-bullet:not(:last-child) {
         margin-right: 1vw;
     }
-    
+
     .swiper-wrapper {
         width: 76vw;
     }
-    
+
     .swiper-container {
         padding-top: 10vw;
         padding-bottom: 10vw;
         margin: 0;
     }
-    
+
     .swiper-slide {
         background-position: center;
         background-size: cover;
@@ -1576,7 +1651,7 @@ input[type="file"] {
         align-items: center;
         justify-content: center;
     }
-    
+
     .swiper-slide .swiper-img-texto {
         display: flex;
         flex-direction: row;
@@ -1584,38 +1659,38 @@ input[type="file"] {
         justify-content: start;
         width: 100%;
     }
-    
+
     .swiper-slide .swiper-img-texto img {
         width: 5vw;
     }
-    
+
     .swiper-slide .swiper-img-texto .texto {
         margin-left: 1.5vw;
     }
-    
+
     .swiper-slide .swiper-img-texto .texto ul {
         list-style-position: inside;
         padding-left: 0;
         font-size: 2vw;
         margin-top: 2vw;
     }
-    
+
     .swiper-slide .swiper-img-texto .texto ul li:not(:last-child) {
         margin-bottom: 1.2vw;
     }
-    
+
     .swiper-slide .swiper-img-texto .texto p {
         font-size: 2vw;
         line-height: 2.5vw;
         margin-top: 2vw;
     }
-    
+
     .swiper-slide .swiper-img-texto .texto .slide-titulo {
         font-size: 2.8vw;
         font-weight: 700;
         margin-top: 1vw;
     }
-    
+
     .swiper-slide .texto-p {
         margin-left: -6.5vw;
     }
@@ -1631,7 +1706,7 @@ input[type="file"] {
     #equipe {
         height: 105vh;
     }
-    
+
     .equipe-container {
         height: 100vh;
         display: flex;
@@ -1643,25 +1718,25 @@ input[type="file"] {
         color: #0B528C;
         gap: 1.5vw;
     }
-    
+
     .equipe-container h2 {
         font-size: 2vw;
         font-weight: 700;
     }
-    
+
     .equipe-foto {
         display: flex;
         gap: 6vw;
         flex-direction: column;
     }
-    
+
     .equipe-foto-row {
         display: flex;
         flex-direction: row;
         justify-content: center;
         gap: 12vw;
     }
-    
+
     .equipe-foto-row a {
         text-decoration: none;
         text-align: center;
@@ -1670,16 +1745,16 @@ input[type="file"] {
         display: flex;
         flex-direction: column;
     }
-    
+
     .equipe-foto-row a img:hover {
         width: 17vw;
     }
-    
+
     .equipe-foto-row a img {
         width: 16vw;
         transition: ease-in 0.15s;
     }
-    
+
     .bottom-line3 {
         position: absolute;
         bottom: -402vh;
@@ -1700,13 +1775,13 @@ input[type="file"] {
         color: #0B528C;
         margin-left: 0;
         width: 100vw;
-        
+
     }
-    
+
     .login-card {
         display: none;
     }
-    
+
     .login-form {
         height: 100vw;
         display: flex;
@@ -1717,59 +1792,59 @@ input[type="file"] {
         padding: 2.5vw;
         width: 80vw;
     }
-    
+
     .login-form h2 {
         font-weight: 700;
         font-size: 35px;
     }
-    
+
     .login-form h3 {
         font-weight: 400;
         font-size: 20px;
         margin-bottom: 25px;
     }
-    
+
     .login-form form {
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
-    
+
     .login-form form a {
         margin-top: -1vw;
         text-align: right;
         font-weight: 500;
         color: #5AB5FF;
     }
-    
+
     .login-form form .form-control {
         border-radius: 5vw;
         border: solid 0.1vw #1185E3;
         width: 250px;
         height: 35px;
     }
-    
+
     .login-form form span .form-control {
         width: 100%;
     }
-    
+
     .login-form form .form-control::placeholder,
     .cadastro-container .form-cadastro input::placeholder {
         color: #5AB5FF;
     }
-    
+
     .login-form form span {
         display: flex;
         flex-direction: row;
         align-items: center;
     }
-    
+
     .login-form form span i {
         margin-left: -35px;
         font-size: 20px;
         cursor: pointer;
     }
-    
+
     .login-form form button {
         border-radius: 110px;
         width: 250px;
@@ -1782,7 +1857,7 @@ input[type="file"] {
         align-items: center;
         justify-content: center;
     }
-    
+
     .login-form p {
         margin-top: 1vw;
         font-weight: 400;
@@ -1799,7 +1874,7 @@ input[type="file"] {
         text-align: center;
         color: #0B528C;
     }
-    
+
     .parcerias-container .form-cadastro {
         height: 35vw;
         display: flex;
@@ -1809,15 +1884,15 @@ input[type="file"] {
         width: 60vw;
         gap: 1.3vw;
     }
-    
+
     .parcerias-container .form-cadastro h2 {
         font-size: 3vw;
     }
-    
+
     .parcerias-container .form-cadastro h3 {
         font-size: 2.5vw;
     }
-    
+
     .parcerias-container .form-cadastro button {
         width: 20vw;
         font-size: 1.3vw;
@@ -1827,7 +1902,7 @@ input[type="file"] {
         justify-content: center;
         align-items: center;
     }
-    
+
     input[type="file"] {
         display: none;
     }
@@ -1849,7 +1924,7 @@ input[type="file"] {
         color: #0B528C;
         margin-left: 0;
     }
-    
+
     .cadastro-container .form-cadastro {
         height: 100vw;
         display: flex;
@@ -1858,38 +1933,38 @@ input[type="file"] {
         flex-direction: column;
         width: 50vw;
     }
-    
+
     .cadEmpresa-container .form-cadastro .txt2 {
         white-space: inherit;
         margin-top: -0.5vw;
         color: #1185E3;
     }
-    
+
     .cadastro-container .form-cadastro form {
         width: 40vw;
         margin-top: -5px;
     }
-    
+
     .cadastro-container .form-cadastro form span {
         display: flex;
         flex-direction: row;
         align-items: center;
     }
-    
+
     .cadastro-container .form-cadastro form span i {
         margin-left: -3vw;
         font-size: 15px;
         cursor: pointer;
     }
-    
+
     .cadastro-container .form-cadastro h2 {
         font-size: 25px;
     }
-    
+
     .cadastro-container .form-cadastro h3 {
         font-size: 15px;
     }
-    
+
     .cadastro-container .form-cadastro input {
         border-radius: 5vw;
         border: solid 0.1vw #1185E3;
@@ -1897,7 +1972,7 @@ input[type="file"] {
         height: 30px;
         font-size: 12px;
     }
-    
+
     .cadastro-container .form-cadastro select {
         border-radius: 5vw;
         border: solid 0.1vw #1185E3;
@@ -2080,27 +2155,27 @@ input[type="file"] {
         text-align: left;
         color: #0B528C;
     }
-    
+
     .swiper-container .swiper-pagination .swiper-pagination-bullet {
         width: 3vw;
         height: 3vw;
         display: none;
     }
-    
+
     .swiper-container .swiper-pagination .swiper-pagination-bullet:not(:last-child) {
         margin-right: 1vw;
     }
-    
+
     .swiper-wrapper {
         width: 80vw;
     }
-    
+
     .swiper-container {
         padding-top: 10vw;
         padding-bottom: 10vw;
         margin: 0;
     }
-    
+
     .swiper-slide {
         background-position: center;
         background-size: cover;
@@ -2115,7 +2190,7 @@ input[type="file"] {
         justify-content: center;
         margin-left: -40px;
     }
-    
+
     .swiper-slide .swiper-img-texto {
         display: flex;
         flex-direction: row;
@@ -2123,39 +2198,39 @@ input[type="file"] {
         justify-content: start;
         width: 100%;
     }
-    
+
     .swiper-slide .swiper-img-texto img {
         width: 8vw;
         margin-top: -1vw;
     }
-    
+
     .swiper-slide .swiper-img-texto .texto {
         margin-left: 1.5vw;
     }
-    
+
     .swiper-slide .swiper-img-texto .texto ul {
         list-style-position: inside;
         padding-left: 0;
         font-size: 3vw;
         margin-top: 2vw;
     }
-    
+
     .swiper-slide .swiper-img-texto .texto ul li:not(:last-child) {
         margin-bottom: 1.2vw;
     }
-    
+
     .swiper-slide .swiper-img-texto .texto p {
         font-size: 3vw;
         line-height: 3.5vw;
         margin-top: 2vw;
     }
-    
+
     .swiper-slide .swiper-img-texto .texto .slide-titulo {
         font-size: 4.5vw;
         font-weight: 700;
         margin-top: 1vw;
     }
-    
+
     .swiper-slide .texto-p {
         margin-left: -9vw;
     }
@@ -2171,7 +2246,7 @@ input[type="file"] {
     #equipe {
         height: 105vh;
     }
-    
+
     .equipe-container {
         height: 100vh;
         display: flex;
@@ -2183,26 +2258,26 @@ input[type="file"] {
         color: #0B528C;
         gap: 1.5vw;
     }
-    
+
     .equipe-container h2 {
         font-size: 3.5vw;
         font-weight: 700;
         white-space: nowrap;
     }
-    
+
     .equipe-foto {
         display: flex;
         gap: 5vw;
         flex-direction: column;
     }
-    
+
     .equipe-foto-row {
         display: flex;
         flex-direction: row;
         justify-content: center;
         gap: 4vw;
     }
-    
+
     .equipe-foto-row a {
         text-decoration: none;
         text-align: center;
@@ -2213,16 +2288,16 @@ input[type="file"] {
         align-items: center;
         justify-content: center;
     }
-    
+
     .equipe-foto-row a img:hover {
         width: 26vw;
     }
-    
+
     .equipe-foto-row a img {
         width: 25vw;
         transition: ease-in 0.15s;
     }
-    
+
     .bottom-line3 {
         position: absolute;
         bottom: -402vh;
@@ -2247,7 +2322,7 @@ input[type="file"] {
         text-align: center;
         color: #0B528C;
     }
-    
+
     .parcerias-container .form-cadastro {
         height: 35vw;
         display: flex;
@@ -2257,11 +2332,11 @@ input[type="file"] {
         width: 90vw;
         gap: 1.3vw;
     }
-    
+
     .parcerias-container .form-cadastro h2 {
         font-size: 20px;
     }
-    
+
     .parcerias-container .form-cadastro h3 {
         font-size: 15px;
     }
@@ -2287,7 +2362,7 @@ input[type="file"] {
     .cadEmpresa-container {
         height: 100vh;
     }
-    
+
     .cadastro-container .form-cadastro {
         height: 100vw;
         display: flex;
@@ -2296,38 +2371,38 @@ input[type="file"] {
         flex-direction: column;
         width: 90vw;
     }
-    
+
     .cadEmpresa-container .form-cadastro .txt2 {
         white-space: inherit;
         margin-top: -0.5vw;
         color: #1185E3;
     }
-    
+
     .cadastro-container .form-cadastro form {
         width: 60vw;
         margin-top: -5px;
     }
-    
+
     .cadastro-container .form-cadastro form span {
         display: flex;
         flex-direction: row;
         align-items: center;
     }
-    
+
     .cadastro-container .form-cadastro form span i {
         margin-left: -30px;
         font-size: 15px;
         cursor: pointer;
     }
-    
+
     .cadastro-container .form-cadastro h2 {
         font-size: 25px;
     }
-    
+
     .cadastro-container .form-cadastro h3 {
         font-size: 15px;
     }
-    
+
     .cadastro-container .form-cadastro input {
         border-radius: 5vw;
         border: solid 0.1vw #1185E3;
@@ -2349,7 +2424,7 @@ input[type="file"] {
         color: #fff;
         text-decoration: none;
     }
-    
+
     .cadastro-container .form-cadastro select {
         border-radius: 5vw;
         border: solid 0.1vw #1185E3;
