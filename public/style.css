@@ -1266,33 +1266,65 @@ input[type="file"] {
 .pg-postagens {
     display: flex;
     flex-direction: column;
-    
+    gap: 2vw;
 }
 .oportunidade-container-expand {
     background-color: #5ab5ff34;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 2vw;
     width: 60vw;
-
+    padding: 1vw;
+    border-radius: 20px;
+    border: 2px #ABD9FF solid;
+    height: 25vw;
 }
 
 .oportunidade-container-expand img {
     width: 15vw;
     border-radius: 15px;
-    height: 25vw;
+    height: 22vw;
     object-fit: cover;
+}
+
+.tipo-oportunidade {
+    background-color: #88c2f1af;
+    border-radius: 15px;
+    text-align: center;
+    width: 100px;
+    color: #0C5D9E;
+    font-weight: 600;
+    font-size: 15px;
+    position: absolute;
+    margin: 5px;
 }
 
 .oportunidade-expand-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: start;
-    gap: 1vw;
+    height: 100%;
 }
 
-.oportunidade-expand-info h2 {
+.oportunidade-expand-info .span-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+.oportunidade-expand-info p {
+    margin: 0;
+    color: #0C5D9E;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.oportunidade-page h2 {
     font-size: 20px;
     color: #1289EA;
 }
@@ -1305,13 +1337,46 @@ input[type="file"] {
     width: 30vw;
 }
 
-.oportunidade-expand-info .oportunidade-datas p {
-    color: #0C5D9E;
+.oportunidade-expand-info button {
+    border: none;
+    background-color: #1185E3;
+    color: #fff;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 20px;
+    padding: 5px 0 5px 0;
+    width: 100%;
+    border-radius: 10px;
 }
 
-.oportunidade-datas 
+.tags-rel {
+    margin-top: 5px;
+}
+
+.oportunidades-parecidas span {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 5vw;
+    width: 60vw;
+    margin-top: 20px
+}
+
+.oportunidades-parecidas span img {
+    width: 200px;
+    border-radius: 15px;
+    height: 150px;
+    object-fit: cover;
+    background-position: center;
+}
+
+.oportunidades-parecidas span p {
+    margin-top: 10px;
+    color: #0C5D9E;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: left;
+}
 
 
 /* ---------------- RESPONSIVIDADE ------------------ */
