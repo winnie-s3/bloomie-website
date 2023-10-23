@@ -8,8 +8,6 @@
      $inicio=$_POST['inicio'];
      $tempo_expirar=$_POST['tempo_expirar'];
      $descricao=$_POST['descricao'];
-     $idade_min=$_POST['idade_min'];
-     $idade_max=$_POST['idade_max'];
      $escolaridade=$_POST['escolaridade'];
      $link=$_POST['link'];
      $tipo_personalidade=$_POST['tipo_personalidade'];
