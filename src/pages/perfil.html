@@ -15,6 +15,62 @@
   <script src="https://kit.fontawesome.com/fec6e5d711.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+  <style>
+    .content {
+      max-width: 500px;
+      border-radius: 5px;
+      padding: 10px;
+      width: 300px;
+      background-color: white;
+      overflow-y: auto;
+      max-height: 50vh;
+      box-shadow: 0 1px 2px #0003;
+      margin: auto 5px;
+    }
+
+    .content::-webkit-scrollbar {
+      width: 6px;
+      border-radius: 10px;
+    }
+
+    .content::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    ul {
+      flex-wrap: wrap;
+    }
+
+    li {
+      list-style: none;
+      background-color: #efefef;
+      padding: 5px;
+      border-radius: 5px;
+      margin: 3px;
+      float: left;
+    }
+
+    input {
+      outline: none;
+      border: none;
+      height: 30px;
+      margin-left: 5px;
+      background-color: #efefef;
+      max-width: 100px;
+      padding: 5px;
+      border-radius: 5px;
+      margin: 3px;
+    }
+
+    button {
+      border-radius: 50%;
+      padding: 0 3px;
+      border: none;
+      cursor: pointer;
+      background-color: #ddd;
+    }
+  </style>
 </head>
 
 <body id="homepage">
@@ -68,16 +124,19 @@
         </div>
       </div>
 
-      <div class="col-10 d-flex justify-content-center bg-primary d-flex flex-column" style="margin-top: 5.5vw;">
+      <div class="col-10 d-flex justify-content-center d-flex flex-column perfil-pg"
+        style="margin-top: 5.5vw; margin-left: 20vw; width: 75vw;">
         <div class="perfil-header">
-          <span style="display: flex; flex-direction: row; justify-content: center; align-items: end;">
-            <img src="https://source.unsplash.com/random/100x100" alt="">
-            <span style="display: flex; flex-direction: row; justify-content: center; align-items: start;">
-              <div class="user-info">
-                <p>Nome de Usuário</p>
-                <p>@nomedouser</p>
-              </div>
-              <i class="ph ph-pencil-simple"></i>
+          <span class="perfil-header-info">
+            <span class="foto-nome-user">
+              <img src="https://source.unsplash.com/random/" alt="">
+              <span style="display: flex; flex-direction: row; justify-content: center; align-items: start;">
+                <div class="user-info">
+                  <p style="font-size: 20px; font-weight: 500;">Nome de Usuário</p>
+                  <p>@nomedouser</p>
+                </div>
+                <i class="ph ph-pencil-simple"></i>
+              </span>
             </span>
             <button>Editar perfil</button>
           </span>
@@ -86,38 +145,112 @@
         <div class="perfil-container">
           <div class="perfil-left">
             <div class="perfil-left-item">
-              <span>
+              <span style="display: flex; flex-direction: row; justify-content: start; align-items: center; gap: 10px;">
                 <h2>Sobre</h2>
                 <i class="ph ph-pencil-simple"></i>
               </span>
-              <p>Quer deixar seu perfil ainda mais incrível? A área 'Sobre' é perfeita pra você compartilhar suas paixões, conquistas e o que te inspira a crescer. Coloque um toque pessoal e vem florescer! :)</p>
+              <p style="margin-top: 10px;">Quer deixar seu perfil ainda mais incrível? A área 'Sobre' é perfeita pra
+                você compartilhar suas
+                paixões, conquistas e o que te inspira a crescer. Coloque um toque pessoal e vem florescer! :)</p>
             </div>
             <div class="perfil-left-item">
               <span>
-                <h2>Meu Perfil DISC é... Realize o teste agora.</h2>
+                <h2>Meu Perfil DISC é... <span style="font-size: 18px; color: #0B528C; display: inline;">Realize o teste
+                    agora.</span></h2>
               </span>
             </div>
             <div class="perfil-left-item">
-              <span style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+              <span style="display: flex; flex-direction: row; justify-content: start; align-items: center; gap: 10px;">
                 <h2>Bloomigos</h2>
-                <p>3</p>
+                <p
+                  style="color: #fff; background-color: #5AB5FF; font-weight: 500; padding: 0px 40px; border-radius: 15px;">
+                  3</p>
                 <i class="ph ph-lock-open"></i>
               </span>
-              <p>Suas conexões estão aqui. Clique em > pra fazer alterações.</p>
-              <span style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+              <p style="margin-top: 0px;">Suas conexões estão aqui. Clique em <span
+                  style="color: #0B528C; display: inline;">></span> pra fazer
+                alterações.</p>
+              <span class="bloomigos-container-perfil" style="margin-top: 10px;">
                 <div class="bloomigo-perfil">
                   <img src="https://source.unsplash.com/random/80x80" alt="">
-                  <p>Usuário 1</p>
+                  <p style="color: #0B528C;">Usuário 1</p>
                 </div>
                 <div class="bloomigo-perfil">
                   <img src="https://source.unsplash.com/random/80x80" alt="">
-                  <p>Usuário 1</p>
+                  <p style="color: #0B528C;">Usuário 1</p>
                 </div>
                 <div class="bloomigo-perfil">
                   <img src="https://source.unsplash.com/random/80x80" alt="">
-                  <p>Usuário 1</p>
+                  <p style="color: #0B528C;">Usuário 1</p>
                 </div>
               </span>
+            </div>
+          </div>
+
+          <div class="perfil-left">
+            <div class="perfil-left-item">
+              <span style="display: flex; flex-direction: row; justify-content: start; align-items: center; gap: 10px;">
+                <h2>Interesses</h2>
+                <i class="ph ph-pencil-simple"></i>
+              </span>
+              <p style="margin-top: 10px;">Ainda não há nada por aqui. Para preencher, escreva 1 interesse e clique em +
+                para adicionar ao perfil.</p>
+              <div class="content">
+                <ul id="tagUl"></ul>
+                <input id="tagInput" type="text" />
+              </div>
+
+            </div>
+
+            <div class="perfil-left-item">
+              <span style="display: flex; flex-direction: row; justify-content: start; align-items: center; gap: 10px;">
+                <h2>Posts</h2>
+              </span>
+              <div class="row-cols-1 justify-content-center align-items-center g-2 col-10 p-4 post-container-item" style="margin-top: 15px;">
+                <div class="col">
+                  <div class="postagem-user">
+                    <img src="https://source.unsplash.com/random/" alt="">
+                    <span>
+                      <p style="font-weight: 700; font-size: 18px;">Nome do Usuário</p>
+                      <p style="color: #45abff;">22/06/2023</p>
+                    </span>
+                  </div>
+                </div>
+                <div class="col">
+                  <p style="margin-top: 15px; font-size: 18px;">Descubra a essência que impulsiona a Bloomie e transforma
+                    vidas. Conheça nossa visão de conectar
+                    estudantes a oportunidades de crescimento pess... <span style="font-weight: 500;">Ler mais.</span></p>
+                </div>
+                <div class="col doc-post">
+                  <span>
+                    <i class="ph ph-file-text"></i>
+                    <a href="">bloomie.pdf</a>
+                  </span>
+                </div>
+                <div class="col img-post">
+                  <img src="https://source.unsplash.com/random/" alt="">
+                </div>
+                <div class="col-12 interacoes-post">
+                  <div class="options-post">
+                    <div class="rightside-op-post">
+                      <span>
+                        <i class="ph ph-heart"></i>
+                        <p>19</p>
+                      </span>
+                      <span>
+                        <i class="ph ph-chat-circle"></i>
+                        <p>19</p>
+                      </span>
+                      <span>
+                        <i class="ph ph-link-simple-horizontal"></i>
+                      </span>
+                    </div>
+                    <div class="leftside-op-post">
+                      <i class="ph ph-warning"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -128,6 +261,7 @@
   <footer>
     <!-- place footer here -->
   </footer>
+
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
@@ -137,7 +271,7 @@
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
     </script>
 
-  <script src="/public/script.js"></script>
+  <script src="../pages/tags.js"></script>
 
 </body>
 
