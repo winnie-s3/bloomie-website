@@ -91,21 +91,21 @@
         <h3 class="text-center" style="font-weight: 400;">Preencha e receba um comunicado no
           lançamento de Bloomie PEMEB</h3>
         <h3 class="text-center txt2" style="font-weight: 500;">(Pessoas e Empresas Mudando a Educação Brasileira).</h3>
-        <form class="row g-4" method="post" action="../PHP/cadastroEmpresa.php">
+        <form class="row g-3 form-cadastro-usuario" method="post" action="../PHP/cadastroEmpresa.php">
           <div class="col-md-12">
-            <input type="text" name="nomeEmpresa" class="form-control input-pemeb" id="inputNome" placeholder="Nome da empresa">
+            <input type="text" name="nome_empresa" class="form-control input-pemeb" id="inputNome" placeholder="Nome da empresa">
           </div>
           <div class="col-md-12">
-            <select class="form-select align-text-bottom select2 input-pemeb">
+            <select class="form-select align-text-bottom select2 input-pemeb" name="setor_empresa">
               <option value="">Setor</option>
-              <option value="" name="setor">Agricultura e Meio Ambiente</option>
-              <option value="" name="setor">Alimentação e Bebidas</option>
-              <option value="">Arte e Cultura</option>
-              <option value="">Construção e engenharia</option>
-              <option value="">Projetos</option>
-              <option value="">Educação</option>
-              <option value="">Empreendedorismo</option>
-              <option value="">Energia e Sustentabilidade</option>
+              <option value="agricultura" >Agricultura e Meio Ambiente</option>
+              <option value="" >Alimentação e Bebidas</option>
+              <option value="" >Arte e Cultura</option>
+              <option value="" >Construção e engenharia</option>
+              <option value="" >Projetos</option>
+              <option value="" >Educação</option>
+              <option value="" >Empreendedorismo</option>
+              <option value="" >Energia e Sustentabilidade</option>
               <option value="">Esportes e lazer</option>
               <option value="">Finanças e Serviços Bancários</option>
               <option value="">Indústria e Manufatura</option>
@@ -125,11 +125,11 @@
             </select>
           </div>
           <div class="col-md-12">
-            <input type="email" name="email" class="form-control input-pemeb" id="inputEmail" placeholder="Email para contato">
+            <input type="email" name="email_empresa" class="form-control input-pemeb" id="inputEmail" placeholder="Email para contato">
           </div>
 
           <div class="col-md-12 text-center btn-lg">
-            <a href="/src/pages/PEMEBConfirmacao.html"><input type="submit" class="btn btn-primary" id="submit" value="Enviar" style="border-radius: 20px;
+            <input type="submit" name="submit" class="btn btn-primary" id="submit" value="Enviar" style="border-radius: 20px;
               width: 20vw;
               height: 5vh;
               font-size: 18px;
@@ -139,7 +139,18 @@
               margin-top: 1vw;
               background-color: #1185E3;
               border: #1185E3;
-              color:#fff;"></a>
+              color:#fff;">
+            <!-- <a href="/src/pages/PEMEBConfirmacao.html"><input type="submit" name="submit" class="btn btn-primary" id="submit" value="Enviar" style="border-radius: 20px;
+              width: 20vw;
+              height: 5vh;
+              font-size: 18px;
+              font-weight: 500;
+              margin-bottom: 1vw;
+              text-align: center;
+              margin-top: 1vw;
+              background-color: #1185E3;
+              border: #1185E3;
+              color:#fff;"></a> -->
             <p><a href="/src/pages/cadastroMentor.html" style="font-weight: 500; color: #5AB5FF;">Cadastrar-se como
                 mentor</a>
           </div>

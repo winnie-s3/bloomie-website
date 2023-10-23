@@ -92,15 +92,15 @@
         <h3 class="text-center txt2" style="font-weight: 500;">(Pessoas e Empresas Mudando a Educação Brasileira).</h3>
         <form class="row g-4" method="post" action="../PHP/cadastroMentor.php">
           <div class="col-md-6">
-            <input type="text" class="form-control" id="inputNome" placeholder="Nome">
+            <input type="text" name="nome_mentor" class="form-control" id="inputNome" placeholder="Nome">
           </div>
           <div class="col-md-6">
-            <input type="text" class="form-control" id="inputNome" placeholder="Sobrenome">
+            <input type="text" name="sobrenome_mentor" class="form-control" id="inputNome" placeholder="Sobrenome">
           </div>
           <div class="col-md-12">
-            <select class="form-select align-text-bottom select2">
+            <select class="form-select align-text-bottom select2" name="setor_mentor">
               <option value="">Área/Setor de identificação ou atuação</option>
-              <option value="">Artes e Entretenimento</option>
+              <option value="artes">Artes e Entretenimento</option>
               <option value="">Ciências da Saúde</option>
               <option value="">Ciências Exatas e Tecnologia</option>
               <option value="">Ciências Humanas</option>
@@ -126,11 +126,11 @@
             </select>
           </div>
           <div class="col-md-12">
-            <input type="email" class="form-control" id="inputEmail" placeholder="Email para contato">
+            <input type="email" name="email_mentor" class="form-control" id="inputEmail" placeholder="Email para contato">
           </div>
 
           <div class="col-md-12 text-center btn-lg">
-            <a href="/src/pages/PEMEBConfirmacao.html"><input type="submit" class="btn btn-primary" value="Enviar" style="border-radius: 20px;
+            <a href="/src/pages/PEMEBConfirmacao.html"><input type="submit" name="submit" class="btn btn-primary" value="Enviar" style="border-radius: 20px;
               width: 20vw;
               height: 5vh;
               font-size: 18px;
