@@ -93,15 +93,12 @@ CREATE TABLE IF NOT EXISTS `curtidas` (
 
 -- Copiando estrutura para tabela bloomie_db.empresa
 CREATE TABLE IF NOT EXISTS `empresa` (
-  `ID_empresa` int(11) NOT NULL,
-  `ID_usuario` int(11) NOT NULL,
+  `ID_empresa` int(11) NOT NULL AUTO_INCREMENT,
   `nome_empresa` varchar(250) NOT NULL DEFAULT '',
-  `setor_empresa` int(11) NOT NULL,
+  `setor_empresa` varchar(250) NOT NULL DEFAULT '',
   `email_empresa` varchar(256) DEFAULT NULL,
-  PRIMARY KEY (`ID_empresa`),
-  KEY `ID_usuario` (`ID_usuario`),
-  CONSTRAINT `empresa` FOREIGN KEY (`ID_usuario`) REFERENCES `usuario` (`ID_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`ID_empresa`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- Exportação de dados foi desmarcado.
 
@@ -126,16 +123,13 @@ CREATE TABLE IF NOT EXISTS `estudante` (
 
 -- Copiando estrutura para tabela bloomie_db.mentor
 CREATE TABLE IF NOT EXISTS `mentor` (
-  `ID_mentor` int(11) NOT NULL,
-  `ID_usuario` int(11) NOT NULL,
+  `ID_mentor` int(11) NOT NULL AUTO_INCREMENT,
   `nome_mentor` varchar(32) NOT NULL,
   `sobrenome_mentor` varchar(32) NOT NULL,
   `email_mentor` varchar(256) DEFAULT NULL,
-  `setor_mentor` int(11) NOT NULL,
-  PRIMARY KEY (`ID_mentor`),
-  KEY `ID_usuario` (`ID_usuario`),
-  CONSTRAINT `mentor` FOREIGN KEY (`ID_usuario`) REFERENCES `usuario` (`ID_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `setor_mentor` varchar(256) NOT NULL DEFAULT '',
+  PRIMARY KEY (`ID_mentor`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- Exportação de dados foi desmarcado.
 
