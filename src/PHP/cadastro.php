@@ -16,7 +16,7 @@ if(isset($_POST['submit']))
     $sobrenome = $_POST['sobrenome'];
     $email = $_POST['email'];
     $usuario = $_POST['usuario'];
-    $senha = $_POST['senha'];
+    $senha = MD5($_POST['senha']);
     $dia = $_POST['dia'];
     $mes = $_POST['mes'];
     $ano = $_POST['ano'];
