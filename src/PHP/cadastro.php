@@ -17,15 +17,16 @@ if(isset($_POST['submit']))
     $email = $_POST['email'];
     $usuario = $_POST['usuario'];
     $senha = MD5($_POST['senha']);
-    $dia = $_POST['dia'];
-    $mes = $_POST['mes'];
-    $ano = $_POST['ano'];
+    // $dia = $_POST['dia'];
+    // $mes = $_POST['mes'];
+    // $ano = $_POST['ano'];
     $estado = $_POST['estado'];
     $cidade = $_POST['cidade'];
-    $data_nasc = "$ano-$mes-$dia";
+    $data_criacao = date;
+    // $data_nasc = ["$ano-$mes-$dia"];
 
     // Use declarações preparadas para evitar SQL Injection
-    $stmt = $conexao->prepare("INSERT INTO usuario(nome, sobrenome, senha, email, usuario) VALUES ('$nome', '$sobrenome', '$senha', '$email', '$usuario')");
+    $stmt = $conexao->prepare("INSERT INTO usuario(nome, sobrenome, senha, email, usuario, estado, cidade) VALUES ('$nome', '$sobrenome', '$senha', '$email', '$usuario', '$estado', '$cidade')");
     
 
     if ($stmt->execute()) {

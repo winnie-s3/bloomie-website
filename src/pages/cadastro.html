@@ -125,12 +125,12 @@
 
           <p style="margin-bottom: -5px;">Estado e Cidade</p>
           <div class="col-md-6 col-sm-6 estado_cidade">
-            <select id="uf" >
+            <select id="uf" name="estado">
               <option>Estado</option>
             </select>
           </div>
           <div class="col-md-6 col-sm-6 estado_cidade">
-            <select id="cidade">
+            <select id="cidade" name="cidade">
               <option>Cidade</option>
             </select>
           </div>
@@ -166,7 +166,7 @@
     crossorigin="anonymous"></script>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.js'></script>
-  <script src="/public/script.js"></script>
+  <script src="../../public/script.js"></script>
   <script>
     $(document).ready(function () {
       $.dobPicker({
