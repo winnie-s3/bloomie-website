@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teste de Personalidade</title>
+    <style>
+        .personalidade {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Personalidade</h1>
+    <div id="pergunta-container">
+        <p id="pergunta"></p>
+        <input type="radio" name="resposta" id="resposta-a" value="a"> <label for="resposta-a">a) </label><br>
+        <input type="radio" name="resposta" id="resposta-b" value="b"> <label for="resposta-b">b) </label><br>
+        <input type="radio" name="resposta" id="resposta-c" value="c"> <label for="resposta-c">c) </label><br>
+        <input type="radio" name="resposta" id="resposta-d" value="d"> <label for="resposta-d">d) </label><br>
+    </div>
+    <button id="proxima-pergunta">Próxima Pergunta</button>
+    <p id="resultado" style="display: none;"></p>
+
+    <div class="personalidade" id="personalidade-d">
+        <h2>Dominância (D)</h2>
+        <p>Descrição da personalidade D.</p>
+        <img src="imagem-d.jpg" alt="Imagem da personalidade D">
+    </div>
+
+    <div class="personalidade" id="personalidade-i">
+        <h2>Influência (I)</h2>
+        <p>Descrição da personalidade I.</p>
+        <img src="imagem-i.jpg" alt="Imagem da personalidade I">
+    </div>
+
+    <div class="personalidade" id="personalidade-s">
+        <h2>Estabilidade (S)</h2>
+        <p>Descrição da personalidade S.</p>
+        <img src="imagem-s.jpg" alt="Imagem da personalidade S">
+    </div>
+
+    <div class="personalidade" id="personalidade-c">
+        <h2>Conformidade (C)</h2>
+        <p>Descrição da personalidade C.</p>
+        <img src="imagem-c.jpg" alt="Imagem da personalidade C">
+    </div>
+
+    <script>
+        const perguntas = [
+            "Em situações de conflito, sou mais propenso a:",
+            "Ao lidar com mudanças, sou mais inclinado a:",
+            "Em um ambiente de trabalho, sou mais propenso a:",
+            "Ao enfrentar um problema complexo, sou mais propenso a:",
+            "No trabalho em equipe, sou mais propenso a:",
+            "Em termos de seguir regras e procedimentos, sou mais propenso a:",
+            "Ao comunicar minhas ideias, sou mais propenso a:",
+            "Em situações de estresse, sou mais propenso a:",
+            "Ao abordar tarefas ou projetos, sou mais propenso a:",
+            "No geral, sou mais propenso a:"
+        ];
+
+        const respostas = {
+            a: 0,
+            b: 0,
+            c: 0,
+            d: 0
+        };
+
+        let perguntaAtual = 0;
+
+        const perguntaElement = document.getElementById("pergunta");
+        const respostaAElement = document.getElementById("resposta-a");
+        const respostaBElement = document.getElementById("resposta-b");
+        const respostaCElement = document.getElementById("resposta-c");
+        const respostaDElement = document.getElementById("resposta-d");
+        const proximaPerguntaButton = document.getElementById("proxima-pergunta");
+        const resultadoElement = document.getElementById("resultado");
+        const personalidadeDElement = document.getElementById("personalidade-d");
+        const personalidadeIElement = document.getElementById("personalidade-i");
+        const personalidadeSElement = document.getElementById("personalidade-s");
+        const personalidadeCElement = document.getElementById("personalidade-c");
+
+        function exibirPergunta() {
+            if (perguntaAtual < perguntas.length) {
+                perguntaElement.textContent = perguntas[perguntaAtual];
+                respostaAElement.checked = false;
+                respostaBElement.checked = false;
+                respostaCElement.checked = false;
+                respostaDElement.checked = false;
+            } else {
+                calcularResultado();
+            }
+        }
+
+        function calcularResultado() {
+            const maioria = Object.keys(respostas).reduce((a, b) => respostas[a] > respostas[b] ? a : b);
+
+            // Esconde todas as divs de personalidade
+            personalidadeDElement.style.display = "none";
+            personalidadeIElement.style.display = "none";
+            personalidadeSElement.style.display = "none";
+            personalidadeCElement.style.display = "none";
+
+            // Exibe apenas a div da personalidade do usuário
+            if (maioria === 'a') {
+                personalidadeDElement.style.display = "block";
+            } else if (maioria === 'b') {
+                personalidadeIElement.style.display = "block";
+            } else if (maioria === 'c') {
+                personalidadeSElement.style.display = "block";
+            } else if (maioria === 'd') {
+                personalidadeCElement.style.display = "block";
+            }
+        }
+
+        exibirPergunta();
+
+        proximaPerguntaButton.addEventListener("click", function () {
+            const respostaSelecionada = document.querySelector('input[name="resposta"]:checked');
+
+            if (respostaSelecionada) {
+                respostas[respostaSelecionada.value]++;
+                perguntaAtual++;
+                exibirPergunta();
+            } else {
+                alert("Por favor, selecione uma resposta antes de avançar.");
+            }
+        });
+    </script>
+</body>
+</html>
