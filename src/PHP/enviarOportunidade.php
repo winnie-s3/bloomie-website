@@ -25,8 +25,9 @@ if(isset($_POST['submit']))
         // Redirecione para outra página, se necessário
         // header('Location: outra_pagina.php');
     } else {
-        echo "Erro ao cadastrar: " . $stmt->error;
+        echo "Erro ao cadastrarr: " . $stmt->error;
     }
+    
 
     // Feche a declaração preparada e a conexão
     $stmt->close();
