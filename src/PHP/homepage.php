@@ -1,14 +1,20 @@
 <?php 
-include ('connect.php')
+include ('connect.php');
 
-if(isset($_POST['submit']))
-{
-    $comentario = $_POST['comentario'];
-    $result = mysqli_query($conexao, "INSERT INTO comentario(comentario_text, ID_usuario) 
-    VALUES ('$comentario', '', '')");
+if(isset($_POST['submit'])){
+    $data_publicação = $_POST['data_publicacao'];
+    $documento = $_POST['documento'];
+    $imagem = $_POST['imagem'];
+    $texto = $_POST['texto'];
+    $stmt = $conexao->prepare("INSERT INTO post(data_publicacao,documento,imagem,texto) 
+    VALUES ('$data_publicaçao','$documento','$imagem','$texto')");
 
-    $comentario_text = "";
-    $ID_usuario = ; 
-   
+    if ($stmt->execute()) {
+        echo "Post feito!";
+       
+    } else {
+        echo "campo vazio " . $stmt->error;
+    }
 }
+
 ?>
