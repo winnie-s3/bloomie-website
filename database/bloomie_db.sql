@@ -136,28 +136,26 @@ CREATE TABLE IF NOT EXISTS `mentor` (
 -- Copiando estrutura para tabela bloomie_db.oportunidade
 CREATE TABLE IF NOT EXISTS `oportunidade` (
   `ID_oportunidade` int(11) NOT NULL AUTO_INCREMENT,
-  `ID_usuario` int(11) NOT NULL,
-  `data_publicação` datetime NOT NULL,
-  `categoria` varchar(150) NOT NULL,
-  `descricao` varchar(500) NOT NULL,
-  `imagem` varchar(64) NOT NULL,
-  `titulo` varchar(50) NOT NULL,
-  `tipo_personalidade` varchar(50) NOT NULL,
-  `status` varchar(25) NOT NULL,
-  `idade_min` int(11) NOT NULL,
-  `idade_max` int(11) NOT NULL,
-  `tempo_expirar` datetime NOT NULL,
-  `tipo` varchar(50) NOT NULL,
-  `inicio` datetime NOT NULL,
+  `ID_usuario` int(11) DEFAULT NULL,
+  `data_publicação` datetime DEFAULT NULL,
+  `categoria` varchar(150) DEFAULT NULL,
+  `descricao` varchar(500) DEFAULT NULL,
+  `imagem` varchar(64) DEFAULT NULL,
+  `tipo_personalidade` varchar(50) DEFAULT NULL,
+  `titulo` varchar(50) DEFAULT NULL,
+  `status` varchar(25) DEFAULT NULL,
+  `tempo_expirar` datetime DEFAULT NULL,
+  `tipo` varchar(50) DEFAULT NULL,
+  `inicio` datetime DEFAULT NULL,
   `link` varchar(64) DEFAULT NULL,
-  `tags` varchar(50) NOT NULL,
-  `cidade` int(11) NOT NULL DEFAULT '0',
-  `estado` int(11) NOT NULL DEFAULT '0',
-  `escolaridade` int(11) NOT NULL,
+  `tags` varchar(50) DEFAULT NULL,
+  `cidade` varchar(50) NOT NULL DEFAULT '0',
+  `estado` char(2) NOT NULL DEFAULT '0',
+  `escolaridade` varchar(50) DEFAULT '',
   PRIMARY KEY (`ID_oportunidade`),
   KEY `ID_usuario` (`ID_usuario`),
   CONSTRAINT `usuario_oportunidade` FOREIGN KEY (`ID_usuario`) REFERENCES `usuario` (`ID_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 -- Exportação de dados foi desmarcado.
 
@@ -251,7 +249,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `ID_usuario` int(11) NOT NULL AUTO_INCREMENT,
   `usuario` varchar(32) NOT NULL,
   `email` varchar(256) NOT NULL,
-  `data_criacao` datetime NOT NULL,
+  `data_criacao` datetime DEFAULT NULL,
   `senha` varchar(128) NOT NULL DEFAULT '',
   `nome` varchar(32) NOT NULL DEFAULT '',
   `sobrenome` varchar(32) NOT NULL DEFAULT '',
@@ -263,7 +261,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   PRIMARY KEY (`ID_usuario`),
   UNIQUE KEY `usuario` (`usuario`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 -- Exportação de dados foi desmarcado.
 
