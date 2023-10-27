@@ -11,19 +11,19 @@ if(isset($_POST['submit']))
      $tempo_expirar = $_POST['tempo_expirar'];
      //$descricao = $_POST['descricao'];
      //$escolaridade = $_POST['escolaridade'];
-     $link = $_POST['link'];
+     //$link = $_POST['link'];
      $tipo_personalidade = $_POST['tipo_personalidade'];
      //$tags = $_POST['tags'];
      // $imagem = $_POST['imagem'];
  
-      $stmt = $conexao->prepare("INSERT INTO oportunidade(titulo,estado,cidade,inicio,tempo_expirar,link,tipo_personalidade) VALUES ('$titulo','$estado','$cidade','$inicio','$tempo_expirar','$link','$tipo_personalidade')");
+      $stmt = $conexao->prepare("INSERT INTO oportunidade(titulo,estado,cidade,inicio,tempo_expirar,tipo_personalidade) VALUES ('$titulo','$estado','$cidade','$inicio','$tempo_expirar','$tipo_personalidade')");
 
 
     
       if ($stmt->execute()) {
         echo "Cadastro realizado com sucesso!";
         // Redirecione para outra página, se necessário
-        // header('Location: outra_pagina.php');
+         header('Location: oportunidadeEnviada.html');
     } else {
         echo "Erro ao cadastrarr: " . $stmt->error;
     }
