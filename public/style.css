@@ -1409,11 +1409,14 @@ input[type="file"] {
 
 
 .pers-container {
-    width: 100%;
+    width: 15vw;
+    height: 15vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    border: 2px solid #B2DCFF;
+    border-radius: 2vw;
 }
 
 .pers-container img {
@@ -1422,6 +1425,10 @@ input[type="file"] {
     height: 15vw;
     object-fit: cover;
     background-position: center;
+}
+
+.d-info, .i-info, .s-info, .c-info {
+    display: none;
 }
 
 /* TAGS INSERT */

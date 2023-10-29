@@ -213,7 +213,7 @@
                     <div class="pers"
                       style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
                       <div class="pers-container">
-                        <img src="../assets/blu-personalidade(1).png" alt="">
+                        <img src="../assets/blu-personalidade1.png" alt="">
                       </div>
                       <p>Dominante (D)</p>
                     </div>
@@ -234,7 +234,7 @@
                     <div class="pers"
                       style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
                       <div class="pers-container">
-                        <img src="../assets/blu-personalidade(1).png" alt="">
+                        <img src="../assets/blu-personalidade1.png" alt="">
                       </div>
                       <p>Influência (I)</p>
                     </div>
@@ -255,7 +255,7 @@
                     <div class="pers"
                       style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
                       <div class="pers-container">
-                        <img src="../assets/blu-personalidade(1).png" alt="">
+                        <img src="../assets/blu-personalidade1.png" alt="">
                       </div>
                       <p>Estável (S)</p>
                     </div>
@@ -276,7 +276,7 @@
                     <div class="pers"
                       style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
                       <div class="pers-container">
-                        <img src="../assets/blu-personalidade(1).png" alt="">
+                        <img src="../assets/blu-personalidade1.png" alt="">
                       </div>
                       <p>Conformidade (C)</p>
                     </div>
@@ -299,21 +299,24 @@
                   </div>
                 </div>
 
-                <div class="pers-foto col-md-12"
-                  style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
-                  <div class="pers"
-                    style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                    <div class="pers-container border">
-                      <label for="uploadImagem">Enviar arquivo</label>
-                      <input type="file" name="imagem" id="uploadImagem" accept="image/*" size="5000000">
+                <div class="pers-foto">
+                  <p>Estável (S)</p>
+                  <div class="col-md-12"
+                    style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                    <div class="pers"
+                      style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                      <div class="pers-container">
+                        <label for="image" style="background-color: #D2D2D2; color: #000; font-weight: 500; padding: 2px 15px; border-radius: 10px;">Enviar Imagem</label>
+                        <input type="file" name="imagem" id="uploadImagem" accept="image/*" size="5000000">
+                      </div>
                     </div>
-                  </div>
-                  <div class="pers-desc">
-                    <ol>
-                      <li>Escolha fotos de boa qualidade e relevantes para a oportunidade.</li>
-                      <li>Evite fotos ofensivas, inadequadas ou que violem direitos autorais.</li>
-                      <li>Siga as diretrizes e termos da Bloomie ao adicionar fotos nas oportunidades.</li>
-                    </ol>
+                    <div class="pers-desc">
+                      <ol>
+                        <li>Escolha fotos de boa qualidade e relevantes para a oportunidade.</li>
+                        <li>Evite fotos ofensivas, inadequadas ou que violem direitos autorais.</li>
+                        <li>Siga as diretrizes e termos da Bloomie ao adicionar fotos nas oportunidades.</li>
+                      </ol>
+                    </div>
                   </div>
                 </div>
 
@@ -475,36 +478,27 @@
 
     // PERSONALIDADE INFO
 
-    
 
-    function mudarPersonalidade() {
-      const personalidade = document.getElementById('tipo_personalidade').value;
-      const d = document.getElementsByClassName('d-info');
-      const i = document.getElementsByClassName('i-info');
-      const s = document.getElementsByClassName('s-info');
-      const c = document.getElementsByClassName('c-info');
-      if (personalidade === "dominante") {
-        d.classList.remove("pers-none");
-        i.classList.add("pers-none");
-        s.classList.add("pers-none");
-        c.classList.add("pers-none");
-      }else if (personalidade === "influente") {
-        d.classList.add("pers-none");
-        i.classList.remove("pers-none");
-        s.classList.add("pers-none");
-        c.classList.add("pers-none");
-      }else if (personalidade === "estavel") {
-        d.classList.add("pers-none");
-        i.classList.add("pers-none");
-        s.classList.remove("pers-none");
-        c.classList.add("pers-none");
-      }else if (personalidade === "conforme") {
-        d.classList.add("pers-none");
-        i.classList.add("pers-none");
-        s.classList.add("pers-none");
-        c.classList.remove("pers-none");
+
+    document.getElementById('tipo_personalidade').addEventListener('change', function () {
+      // Ocultar todas as divs relacionadas às personalidades
+      document.querySelector('.d-info').style.display = 'none';
+      document.querySelector('.i-info').style.display = 'none';
+      document.querySelector('.s-info').style.display = 'none';
+      document.querySelector('.c-info').style.display = 'none';
+
+      // Exibir a div correspondente à opção selecionada
+      var selectedOption = this.value;
+      if (selectedOption === 'dominante') {
+        document.querySelector('.d-info').style.display = 'block';
+      } else if (selectedOption === 'influente') {
+        document.querySelector('.i-info').style.display = 'block';
+      } else if (selectedOption === 'estavel') {
+        document.querySelector('.s-info').style.display = 'block';
+      } else if (selectedOption === 'conforme') {
+        document.querySelector('.c-info').style.display = 'block';
       }
-    }
+    });
 
   </script>
 
