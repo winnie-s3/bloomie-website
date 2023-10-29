@@ -101,7 +101,8 @@
                 </div>
                 <div class="col text-white sidebar-op">
                   <i class="ph ph-plant"></i>
-                  <a href="../pages/enviarOportunidade.html" class="text-decoration-none text-white">Enviar<br>oportunidades</a>
+                  <a href="../pages/enviarOportunidade.html"
+                    class="text-decoration-none text-white">Enviar<br>oportunidades</a>
                 </div>
                 <div class="col text-white sidebar-op">
                   <i class="ph ph-gear"></i>
@@ -120,10 +121,9 @@
         </div>
       </div>
 
-      <div class="col-10 justify-content-center d-flex g-0" style="margin-left: 10vw; margin-top: 10vw;">
+      <div class="col-10 justify-content-center d-flex g-0" style="margin-left: 10vw; margin-top: 5.5VW;">
         <section id="cadastro" style="height: 220vh; display: flex; justify-content: start; align-items: start;">
-          <div class="cadastro-container"
-            style="display: flex; justify-content: flex-start; align-items: start;">
+          <div class="cadastro-container" style="display: flex; justify-content: flex-start; align-items: start;">
             <div class="form-cadastro" style="height: 220vh;">
               <h2 class="text-center" style="font-weight: 700;">É hora de plantar o futuro!</h2>
               <h3 class="text-center" style="font-weight: 400;">Acesse oportunidades incríveis!<br><span
@@ -141,8 +141,8 @@
                     <option value="">Estágios</option>
                     <option value="">Aprendizado</option>
                     <option value="">Bolsas de estudo</option>
-                    <option value="">Estágio</option>
-                    <option value="">Estágio</option>
+                    <option value="">Concursos e competições</option>
+                    <option value="">Voluntariado</option>
                   </select>
                 </div>
 
@@ -161,11 +161,12 @@
 
                 <div class="col-md-6 col-sm-4">
                   <p>Início</p>
-                  <input class="col-md-12" type="date" name="inicio" id="inicio">
+                  <input class="col-md-12" type="date" name="inicio" id="inicio" style="padding: 1vw; color: #5AB5FF;">
                 </div>
                 <div class="col-md-6 col-sm-4">
                   <p>Prazo de vencimento</p>
-                  <input class="col-md-12" type="date" name="tempo_expirar" id="vencimento">
+                  <input class="col-md-12" type="date" name="tempo_expirar" id="vencimento"
+                    style="padding: 1vw; color: #5AB5FF;">
                 </div>
 
                 <div class="col-md-12">
@@ -180,7 +181,13 @@
                 <div class="col-md-12">
                   <p>Escolaridade</p>
                   <select class="col-md-12" id="escolaridade" name="escolaridade">
-                    <option></option>
+                    <option>Ensino fundamental incompleto</option>
+                    <option>Ensino fundamental completo</option>
+                    <option>Ensino médio incompleto</option>
+                    <option>Ensino médio completo</option>
+                    <option>Ensino superior incompleto</option>
+                    <option>Ensino superior completo</option>
+                    <option>Livre</option>
                   </select>
                 </div>
 
@@ -192,36 +199,103 @@
                 <div class="col-md-12">
                   <p>Tipo de personalidade</p>
                   <select class="col-md-12" id="tipo_personalidade" name="tipo_personalidade">
-                    <option>Dominante</option>
-                    <option>Influente</option>
-                    <option>Estável</option>
-                    <option>Conforme</option>
+                    <option value="" class="optPers"></option>
+                    <option value="dominante" class="optPers">Dominante</option>
+                    <option value="influente" class="optPers">Influente</option>
+                    <option value="estavel" class="optPers">Estável</option>
+                    <option value="conforme" class="optPers">Conforme</option>
                   </select>
                 </div>
 
-                <div class="i-info col-md-12"
-                  style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
-                  <div class="pers"
-                    style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                    <div class="pers-container">
-                      <img src="https://source.unsplash.com/random/100x100" alt="">
+                <div class="d-info">
+                  <div class="col-md-12"
+                    style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                    <div class="pers"
+                      style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                      <div class="pers-container">
+                        <img src="../assets/blu-personalidade(1).png" alt="">
+                      </div>
+                      <p>Dominante (D)</p>
                     </div>
-                    <p>Influência (I)</p>
-                  </div>
-                  <div class="pers-desc">
-                    <ul>
-                      <li>Sociável, extrovertido e cheio de energia.</li>
-                      <li>Habilidades fortes de comunicação e persuasão.</li>
-                      <li>Criativo e cheio de ideias inovadoras.</li>
-                      <li>Capacidade de motivar e inspirar os outros.</li>
-                    </ul>
+                    <div class="pers-desc">
+                      <ul id="infoPers-ul">
+                        <li>Sociável, extrovertido e cheio de energia.</li>
+                        <li>Habilidades fortes de comunicação e persuasão.</li>
+                        <li>Criativo e cheio de ideias inovadoras.</li>
+                        <li>Capacidade de motivar e inspirar os outros.</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
+
+                <div class="i-info">
+                  <div class="col-md-12"
+                    style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                    <div class="pers"
+                      style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                      <div class="pers-container">
+                        <img src="../assets/blu-personalidade(1).png" alt="">
+                      </div>
+                      <p>Influência (I)</p>
+                    </div>
+                    <div class="pers-desc">
+                      <ul id="infoPers-ul">
+                        <li>Sociável, extrovertido e cheio de energia.</li>
+                        <li>Habilidades fortes de comunicação e persuasão.</li>
+                        <li>Criativo e cheio de ideias inovadoras.</li>
+                        <li>Capacidade de motivar e inspirar os outros.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="s-info">
+                  <div class="col-md-12"
+                    style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                    <div class="pers"
+                      style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                      <div class="pers-container">
+                        <img src="../assets/blu-personalidade(1).png" alt="">
+                      </div>
+                      <p>Estável (S)</p>
+                    </div>
+                    <div class="pers-desc">
+                      <ul id="infoPers-ul">
+                        <li>Sociável, extrovertido e cheio de energia.</li>
+                        <li>Habilidades fortes de comunicação e persuasão.</li>
+                        <li>Criativo e cheio de ideias inovadoras.</li>
+                        <li>Capacidade de motivar e inspirar os outros.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="c-info">
+                  <div class="col-md-12"
+                    style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                    <div class="pers"
+                      style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                      <div class="pers-container">
+                        <img src="../assets/blu-personalidade(1).png" alt="">
+                      </div>
+                      <p>Conformidade (C)</p>
+                    </div>
+                    <div class="pers-desc">
+                      <ul id="infoPers-ul">
+                        <li>Sociável, extrovertido e cheio de energia.</li>
+                        <li>Habilidades fortes de comunicação e persuasão.</li>
+                        <li>Criativo e cheio de ideias inovadoras.</li>
+                        <li>Capacidade de motivar e inspirar os outros.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
 
                 <div class="col-md-12">
                   <p>Tags</p>
                   <div class="container-tag col-md-12">
-                    <input type="text" class="input-tag col-md-12" placeholder="Insira um ; após cada tag"/>
+                    <input type="text" class="input-tag col-md-12" placeholder="Insira um ; após cada tag" />
                   </div>
                 </div>
 
@@ -398,6 +472,39 @@
         }
       }
     };
+
+    // PERSONALIDADE INFO
+
+    
+
+    function mudarPersonalidade() {
+      const personalidade = document.getElementById('tipo_personalidade').value;
+      const d = document.getElementsByClassName('d-info');
+      const i = document.getElementsByClassName('i-info');
+      const s = document.getElementsByClassName('s-info');
+      const c = document.getElementsByClassName('c-info');
+      if (personalidade === "dominante") {
+        d.classList.remove("pers-none");
+        i.classList.add("pers-none");
+        s.classList.add("pers-none");
+        c.classList.add("pers-none");
+      }else if (personalidade === "influente") {
+        d.classList.add("pers-none");
+        i.classList.remove("pers-none");
+        s.classList.add("pers-none");
+        c.classList.add("pers-none");
+      }else if (personalidade === "estavel") {
+        d.classList.add("pers-none");
+        i.classList.add("pers-none");
+        s.classList.remove("pers-none");
+        c.classList.add("pers-none");
+      }else if (personalidade === "conforme") {
+        d.classList.add("pers-none");
+        i.classList.add("pers-none");
+        s.classList.add("pers-none");
+        c.classList.remove("pers-none");
+      }
+    }
 
   </script>
 
