@@ -1,7 +1,8 @@
 <?php
     
     $conexao = new mysqli('localhost', 'root', '', 'bloomie_db');
-    $data = date('d-m-Y H:i:s');
+    date_default_timezone_set("America/Sao_Paulo");
+    $data = date('Y-m-d H:i:s');
 
     // if($conexao->connect_errno)
     // {

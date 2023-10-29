@@ -26,24 +26,26 @@ if(isset($_POST['submit']))
         $status = "ativa";
     }
  
-    $stmt = $conexao->prepare("INSERT INTO oportunidade(titulo, estado, cidade, inicio, tempo_expirar, link, tipo_personalidade, descricao, categoria, escolaridade, status_opor, data_criacao) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt = $conexao->prepare("INSERT INTO oportunidade(titulo, estado, cidade, inicio, tempo_expirar, link, tipo_personalidade, descricao, categoria, escolaridade, status_opor, data_publicacao) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
-    $stmt->bind_param("sssssssssss", $titulo, $estado, $cidade, $inicio, $tempo_expirar, $link, $tipo_personalidade, $descricao, $categoria, $escolaridade, $status, $data);
+if (!$stmt) {
+    die("Erro na preparação da consulta: " . $conexao->error);
+}
 
+$stmt->bind_param("ssssssssssss", $titulo, $estado, $cidade, $inicio, $tempo_expirar, $link, $tipo_personalidade, $descricao, $categoria, $escolaridade, $status, $data);
 
-    
-      if ($stmt->execute()) {
-        echo "Cadastro realizado com sucesso!";
-        // Redirecione para outra página, se necessário
-        // header('Location: outra_pagina.php');
-    } else {
-        echo "Erro ao cadastrarr: " . $stmt->error;
-    }
-    
+if ($stmt->execute()) {
+    echo "Cadastro realizado com sucesso!";
+    // Redirecione para outra página, se necessário
+    // header('Location: outra_pagina.php');
+} else {
+    echo "Erro ao cadastrar: " . $stmt->error;
+}
 
-    // Feche a declaração preparada e a conexão
-    $stmt->close();
-    $conexao->close();
+// Feche a declaração preparada e a conexão
+$stmt->close();
+$conexao->close();
+
     
      }
 ?>
