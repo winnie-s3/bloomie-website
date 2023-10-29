@@ -1421,7 +1421,10 @@ input[type="file"] {
     background-position: center;
 }
 
-.d-info, .i-info, .s-info, .c-info {
+.d-info,
+.i-info,
+.s-info,
+.c-info {
     display: none;
 }
 
@@ -1695,6 +1698,38 @@ input[type="file"] {
     text-align: left;
 }
 
+/* TESTE DISC - OPORTUNIDADE ENVIADA */
+.disc-container h1 {
+    font-size: 30px;
+    color: #0B528C;
+    font-weight: 700;
+}
+
+.disc-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    width: 40vw;
+    text-align: center;
+}
+
+.disc-container p {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.disc-op-container {
+    margin-top: 5.5vw;
+    margin-left: 12vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0B528C;
+}
 
 /* ---------------- RESPONSIVIDADE ------------------ */
 
