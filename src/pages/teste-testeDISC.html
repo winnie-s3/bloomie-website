@@ -19,11 +19,59 @@
         .personalidade {
             display: none;
         }
+
+        /* Estilize o indicador de progresso */
+        .progress-indicator {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .progress-step {
+            width: 30px;
+            height: 30px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .completed {
+            background-color: #00FF00;
+            /* Cor de fundo para itens completos */
+        }
+
+        /* Estilize o ícone de conclusão */
+        .completion-icon {
+            width: 30px;
+            height: 30px;
+            background-color: #00FF00;
+            /* Cor de fundo para o ícone de conclusão */
+            border: 2px solid #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     </style>
 </head>
 
 <body>
-    <h1>Teste de Personalidade</h1>
+    <div class="progress-indicator">
+        <div class="progress-step completed">1</div>
+        <div class="progress-step">2</div>
+        <div class="progress-step">3</div>
+        <div class="progress-step">4</div>
+        <div class="progress-step">5</div>
+        <div class="progress-step">6</div>
+        <div class="progress-step">7</div>
+        <div class="progress-step">8</div>
+        <div class="progress-step">9</div>
+        <div class="progress-step">10</div>
+        <div class="completion-icon">✔</div>
+    </div>
     <div id="pergunta-container">
         <p id="pergunta"></p>
         <input type="radio" name="resposta" id="resposta-a" value="a"> <label for="resposta-a">a) </label><br>
